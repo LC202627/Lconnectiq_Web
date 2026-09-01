@@ -8,7 +8,7 @@ import { SERVICES } from "@/components/services/servicesData";
 
 export default function ServicesTeaser() {
   return (
-    <section id="services-teaser" className="py-20 md:py-28 bg-mist">
+    <section id="services-teaser" className="py-20 md:py-28 bg-mist scroll-mt-28">
       <div className="max-w-[1240px] mx-auto px-6 md:px-7">
         <Reveal className="max-w-[760px] mb-12">
           <Eyebrow>What we deliver</Eyebrow>

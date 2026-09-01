@@ -25,6 +25,7 @@ export default function SiteFooter() {
             <Link to="/about" className="text-sm hover:text-gold-soft transition-colors">About</Link>
             <Link to="/portfolio" className="text-sm hover:text-gold-soft transition-colors">Portfolio</Link>
             <Link to="/contact" className="text-sm hover:text-gold-soft transition-colors">Contact</Link>
+            <Link to="/settings" className="text-sm hover:text-gold-soft transition-colors">Settings</Link>
             <Link to="/privacy" className="text-sm hover:text-gold-soft transition-colors">Privacy</Link>
             <Link to="/terms" className="text-sm hover:text-gold-soft transition-colors">Terms</Link>
           </nav>

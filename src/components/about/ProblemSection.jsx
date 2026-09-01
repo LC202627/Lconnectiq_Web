@@ -50,7 +50,7 @@ export default function ProblemSection() {
           ))}
         </div>
 
-        <Reveal delay={0.2} className="mt-10 flex flex-col md:flex-row gap-4 items-start bg-navy rounded-sm px-7 py-6.5 py-[26px]">
+        <Reveal delay={0.2} className="mt-10 flex flex-col md:flex-row gap-4 items-start bg-navy rounded-sm px-7 py-[26px]">
           <span className="text-gold-soft font-bold text-[15px] tracking-[0.04em] whitespace-nowrap">
             Our answer &rarr;
           </span>

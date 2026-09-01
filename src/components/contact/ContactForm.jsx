@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { base44 } from "@/api/base44Client";
 import { useToast } from "@/components/ui/use-toast";
-import { Loader2, Send } from "lucide-react";
+import { Loader2, Send, Check } from "lucide-react";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 
 const SERVICES = [
@@ -15,7 +15,7 @@ const SERVICES = [
 ];
 
 const inputCls =
-  "w-full bg-white/[0.06] border border-white/[0.16] rounded-sm px-3.5 py-3 text-white placeholder:text-white/40 text-[15px] transition-colors duration-200 focus:outline-none focus:border-gold-soft";
+  "w-full bg-white/[0.06] border border-white/[0.16] rounded-sm px-3.5 py-3 text-white placeholder:text-white/55 text-[15px] transition-colors duration-200 focus:outline-none focus:border-gold-soft";
 
 export default function ContactForm() {
   const { toast } = useToast();
@@ -51,6 +51,27 @@ export default function ContactForm() {
       setSubmitting(false);
     }
   };
+
+  if (sent) {
+    return (
+      <div className="bg-white/[0.05] border border-white/[0.16] rounded-sm p-8 md:p-10 text-center">
+        <div className="w-14 h-14 rounded-full bg-gold-soft text-navy flex items-center justify-center mx-auto">
+          <Check size={28} />
+        </div>
+        <h3 className="text-white font-bold text-2xl mt-5">Inquiry sent</h3>
+        <p className="text-white/70 text-[15px] mt-2.5 max-w-[42ch] mx-auto leading-relaxed">
+          Thanks — we&apos;ll respond within one business day with a clear scope, defined deliverables, and
+          no ambiguity about what we do and don&apos;t cover.
+        </p>
+        <button
+          onClick={() => setSent(false)}
+          className="mt-7 inline-flex items-center gap-2 text-[15px] font-semibold text-gold-soft hover:text-white transition-colors"
+        >
+          Send another inquiry
+        </button>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="bg-white/[0.05] border border-white/[0.16] rounded-sm p-8 md:p-9">
@@ -88,7 +109,7 @@ export default function ContactForm() {
           Service needed
         </label>
         <Select value={form.service} onValueChange={(v) => setForm((f) => ({ ...f, service: v }))}>
-          <SelectTrigger className={`${inputCls} h-auto py-3 data-[placeholder]:text-white/40`}>
+          <SelectTrigger className={`${inputCls} h-auto py-3 data-[placeholder]:text-white/55`}>
             <SelectValue placeholder="Select a service…" />
           </SelectTrigger>
           <SelectContent className="max-h-72">
@@ -114,6 +135,14 @@ export default function ContactForm() {
         />
       </div>
 
+      <p className="text-[12px] text-white/45 mb-5 leading-relaxed">
+        We use your details only to respond to this inquiry. See our{" "}
+        <a href="/privacy" className="text-gold-soft hover:text-white transition-colors underline">
+          privacy policy
+        </a>
+        .
+      </p>
+
       <button
         type="submit"
         disabled={submitting}
@@ -121,10 +150,8 @@ export default function ContactForm() {
       >
         {submitting ? (
           <>
-            <Loader2 size={16} className="animate-spin" /> Sending&hellip;
+            <Loader2 size={16} className="animate-spin" /> Sending…
           </>
-        ) : sent ? (
-          <>Inquiry sent &#10003;</>
         ) : (
           <>
             Send project inquiry <Send size={16} />

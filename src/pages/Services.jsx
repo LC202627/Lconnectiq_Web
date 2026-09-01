@@ -25,7 +25,7 @@ export default function Services() {
 
           <Reveal delay={0.15} className="mt-12">
             <div className="text-xs font-semibold tracking-[0.1em] uppercase text-ink-soft mb-4">
-              On the roadmap (Years 3&ndash;5)
+              On the roadmap (Years 3–5)
             </div>
             <div className="flex flex-wrap gap-2.5">
               {ROADMAP.map((r) => (

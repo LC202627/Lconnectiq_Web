@@ -1,33 +1,64 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Image } from "@/components/ui/image";
 import Eyebrow from "@/components/shared/Eyebrow";
 
 const HERO_VIDEO =
   "https://media.base44.com/videos/public/user_69efa00d86253571e2232b14/6f829cd56_ElevenLabs_video_flux-3_createadrone_2026-08-22T08_25_29.mp4";
+const HERO_POSTER =
+  "https://media.base44.com/images/public/6a9705851490e4fe54db65e8/c1ed938a7_generated_image.png";
+
+const OVERLAY =
+  "radial-gradient(120% 120% at 75% 10%, rgba(25,26,41,.55) 0%, rgba(25,26,41,.72) 45%, rgba(15,16,25,.9) 100%)";
 
 export default function Hero() {
+  const videoRef = useRef(null);
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReduceMotion(mq.matches);
+    const onChange = () => setReduceMotion(mq.matches);
+    mq.addEventListener?.("change", onChange);
+    return () => mq.removeEventListener?.("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    if (reduceMotion && videoRef.current) videoRef.current.pause();
+  }, [reduceMotion]);
+
   return (
     <header className="relative min-h-screen flex items-end overflow-hidden bg-navy">
-      <div className="absolute inset-0 z-0 hidden sm:block">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src={HERO_VIDEO} type="video/mp4" />
-        </video>
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(120% 120% at 75% 10%, rgba(25,26,41,.55) 0%, rgba(25,26,41,.72) 45%, rgba(15,16,25,.9) 100%)",
-          }}
+      {/* Mobile / reduced-motion still background */}
+      <div className={`absolute inset-0 z-0 ${reduceMotion ? "block" : "sm:hidden"}`}>
+        <Image
+          src={HERO_POSTER}
+          alt="Aerial view of a construction site at dusk"
+          className="absolute inset-0 w-full h-full"
+          fittingType="fill"
         />
+        <div className="absolute inset-0" style={{ background: OVERLAY }} />
       </div>
+
+      {/* Desktop video */}
+      {!reduceMotion && (
+        <div className="absolute inset-0 z-0 hidden sm:block">
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={HERO_POSTER}
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={HERO_VIDEO} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0" style={{ background: OVERLAY }} />
+        </div>
+      )}
 
       <div
         className="absolute inset-0 z-[1]"
@@ -54,13 +85,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 0.61, 0.36, 1] }}
-          className="text-white font-extrabold uppercase leading-[1.02] tracking-tight text-[clamp(34px,6vw,72px)] max-w-[14ch]"
+          className="text-white font-bold leading-[1.05] tracking-tight text-[clamp(34px,6vw,64px)] max-w-[18ch]"
         >
-          Leadership.
-          <br />
-          Intelligence.
-          <br />
-          <span className="text-gold-soft">Connection.</span>
+          The execution layer your{" "}
+          <span className="text-gold-soft">construction project</span> is missing.
         </motion.h1>
 
         <motion.p
