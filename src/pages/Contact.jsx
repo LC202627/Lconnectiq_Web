@@ -44,9 +44,6 @@ export default function Contact() {
               lc@lconnectiq.com
             </a>
           </p>
-          <p className="mt-3.5 text-[13px] tracking-[0.14em] uppercase text-gold-soft">
-            Leadership. Intelligence. Connection.
-          </p>
         </Reveal>
 
         <Reveal delay={0.15}>

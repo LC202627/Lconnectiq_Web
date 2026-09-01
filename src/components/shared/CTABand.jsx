@@ -36,9 +36,6 @@ export default function CTABand() {
           <a href="mailto:lc@lconnectiq.com" className="text-[15px] text-gold-soft hover:text-white transition-colors">
             lc@lconnectiq.com
           </a>
-          <p className="text-[13px] tracking-[0.14em] uppercase text-gold-soft">
-            Leadership. Intelligence. Connection.
-          </p>
         </div>
       </Reveal>
     </section>
