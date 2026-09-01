@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
+import Logo from "@/components/shared/Logo";
 
 const LINKS = [
   { label: "Services", to: "/services" },
@@ -32,15 +33,8 @@ export default function SiteHeader() {
       }`}
     >
       <div className="max-w-[1240px] mx-auto px-6 md:px-7 h-[76px] flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span
-            className={`text-[22px] font-extrabold tracking-tight transition-colors duration-500 ${
-              showSolid ? "text-navy" : "text-white"
-            }`}
-          >
-            LConnecti
-            <span className={showSolid ? "text-gold" : "text-gold-soft"}>Q</span>
-          </span>
+        <Link to="/" className="flex items-center group">
+          <Logo className="h-10 w-[156px] transition-opacity duration-300 group-hover:opacity-90" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-9">
