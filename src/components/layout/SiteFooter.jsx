@@ -9,7 +9,7 @@ export default function SiteFooter() {
       <div className="max-w-[1240px] mx-auto px-6 md:px-7">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-8 border-b border-white/10">
           <div className="max-w-[42ch]">
-            <Logo className="h-20 w-[300px]" inverted />
+            <Logo className="h-20 w-[300px] -ml-6" inverted />
             <p className="text-sm mt-5 text-white/55">
               Tallahassee, Florida &middot;{" "}
               <a href="mailto:lc@lconnectiq.com" className="text-gold-soft hover:text-white transition-colors">
