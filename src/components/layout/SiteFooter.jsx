@@ -9,7 +9,7 @@ export default function SiteFooter() {
       <div className="max-w-[1240px] mx-auto px-6 md:px-7">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-8 border-b border-white/10">
           <div className="max-w-[42ch]">
-            <Logo className="h-14 w-[220px]" />
+            <Logo className="h-14 w-[220px]" inverted />
             <p className="text-sm mt-5 leading-relaxed">
               Construction support services: document management, remote project engineering,
               Procore administration, BIM &amp; CAD support, and workflow automation.

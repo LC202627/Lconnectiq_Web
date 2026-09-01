@@ -4,9 +4,10 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import Logo from "@/components/shared/Logo";
 
 const LINKS = [
+  { label: "Home", to: "/" },
+  { label: "About Us", to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Portfolio", to: "/portfolio" },
-  { label: "About", to: "/about" },
 ];
 
 export default function SiteHeader() {
@@ -34,7 +35,10 @@ export default function SiteHeader() {
     >
       <div className="max-w-[1240px] mx-auto px-6 md:px-7 h-[76px] flex items-center justify-between">
         <Link to="/" className="flex items-center group">
-          <Logo className="h-10 w-[156px] transition-opacity duration-300 group-hover:opacity-90" />
+          <Logo
+            className="h-10 w-[156px] transition-opacity duration-300 group-hover:opacity-90"
+            inverted={!showSolid}
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-9">
