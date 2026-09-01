@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { base44 } from "@/api/base44Client";
 import { useToast } from "@/components/ui/use-toast";
 import { Loader2, Send } from "lucide-react";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 
 const SERVICES = [
   "Construction Document Management",
@@ -86,14 +87,18 @@ export default function ContactForm() {
         <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
           Service needed
         </label>
-        <select value={form.service} onChange={update("service")} className={inputCls}>
-          <option value="" className="text-black">Select a service&hellip;</option>
-          {SERVICES.map((s) => (
-            <option key={s} value={s} className="text-black">
-              {s}
-            </option>
-          ))}
-        </select>
+        <Select value={form.service} onValueChange={(v) => setForm((f) => ({ ...f, service: v }))}>
+          <SelectTrigger className={`${inputCls} h-auto py-3 data-[placeholder]:text-white/40`}>
+            <SelectValue placeholder="Select a service…" />
+          </SelectTrigger>
+          <SelectContent className="max-h-72">
+            {SERVICES.map((s) => (
+              <SelectItem key={s} value={s} className="text-navy">
+                {s}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
 
       <div className="mb-5">

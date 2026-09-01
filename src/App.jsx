@@ -12,6 +12,7 @@ import Home from '@/pages/Home';
 import Services from '@/pages/Services';
 import Portfolio from '@/pages/Portfolio';
 import ProjectDetail from '@/pages/ProjectDetail';
+import Settings from '@/pages/Settings';
 import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import Privacy from '@/pages/Privacy';
@@ -49,6 +50,7 @@ const AuthenticatedApp = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:slug" element={<ProjectDetail />} />
+        <Route path="/settings" element={<Settings />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />

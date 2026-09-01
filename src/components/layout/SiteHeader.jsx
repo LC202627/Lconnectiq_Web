@@ -29,6 +29,7 @@ export default function SiteHeader() {
 
   return (
     <header
+      style={{ paddingTop: 'env(safe-area-inset-top)' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         showSolid ? "bg-white shadow-[0_1px_0_rgba(35,37,56,0.08),0_6px_24px_rgba(35,37,56,0.06)]" : "bg-transparent"
       }`}
