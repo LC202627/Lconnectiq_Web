@@ -12,7 +12,6 @@ import Home from '@/pages/Home';
 import Services from '@/pages/Services';
 import Portfolio from '@/pages/Portfolio';
 import ProjectDetail from '@/pages/ProjectDetail';
-import Settings from '@/pages/Settings';
 import InterfaceReport from '@/pages/InterfaceReport';
 import About from '@/pages/About';
 import Contact from '@/pages/Contact';
@@ -51,7 +50,6 @@ const AuthenticatedApp = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:slug" element={<ProjectDetail />} />
-        <Route path="/settings" element={<Settings />} />
         <Route path="/interface-report" element={<InterfaceReport />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
