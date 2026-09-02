@@ -1,13 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Home, LayoutGrid, FolderOpen, Mail, Settings } from "lucide-react";
+import { Home, LayoutGrid, FolderOpen, Mail } from "lucide-react";
 
 const TABS = [
   { to: "/", label: "Home", icon: Home },
   { to: "/services", label: "Services", icon: LayoutGrid },
   { to: "/portfolio", label: "Portfolio", icon: FolderOpen },
   { to: "/contact", label: "Contact", icon: Mail },
-  { to: "/settings", label: "Settings", icon: Settings },
 ];
 
 export default function BottomTabBar() {
