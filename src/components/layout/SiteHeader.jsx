@@ -37,7 +37,7 @@ export default function SiteHeader() {
       <div className="max-w-[1240px] mx-auto px-6 md:px-7 h-[76px] flex items-center justify-between">
         <Link to="/" className="flex items-center group">
           <Logo
-            className="h-10 w-[156px] transition-opacity duration-300 group-hover:opacity-90"
+            className="h-10 w-[156px] -ml-3 transition-opacity duration-300 group-hover:opacity-90"
             inverted={!showSolid}
           />
         </Link>
