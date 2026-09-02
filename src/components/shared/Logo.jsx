@@ -9,7 +9,7 @@ export default function Logo({ className = "", inverted = false }) {
   return (
     <Image
       src={LOGO_URL}
-      alt="LConnectiQ — Leadership. Intelligence. Connection."
+      alt="LConnectiQ"
       fittingType="fit"
       className={cn("block", inverted && "invert", className)}
     />
