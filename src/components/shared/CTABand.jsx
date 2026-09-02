@@ -13,13 +13,13 @@ export default function CTABand() {
           backgroundImage: "linear-gradient(90deg, rgba(138,114,38,.09) 1px, transparent 1px)",
           backgroundSize: "80px 100%",
           maskImage: "linear-gradient(90deg, transparent, #000 60%)",
-          WebkitMaskImage: "linear-gradient(90deg, transparent, #000 60%)",
-        }}
-      />
+          WebkitMaskImage: "linear-gradient(90deg, transparent, #000 60%)"
+        }} />
+      
       <Reveal className="relative z-10 max-w-[1240px] mx-auto px-6 md:px-7 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <Eyebrow dark>Start a project</Eyebrow>
-          <h2 className="text-white font-extrabold text-[clamp(30px,4.2vw,50px)] leading-tight mt-4">
+          <h2 className="text-white font-extrabold leading-tight mt-4 text-5xl">
             Let's keep your next project <span className="text-gold-soft">accountable.</span>
           </h2>
           <p className="text-white/75 text-lg mt-4 max-w-[46ch]">
@@ -29,8 +29,8 @@ export default function CTABand() {
         <div className="flex flex-col items-start gap-4">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2.5 font-semibold text-[15px] rounded-sm bg-gold-soft text-navy px-7 py-4 transition-all duration-300 hover:bg-white hover:-translate-y-0.5"
-          >
+            className="inline-flex items-center gap-2.5 font-semibold text-[15px] rounded-sm bg-gold-soft text-navy px-7 py-4 transition-all duration-300 hover:bg-white hover:-translate-y-0.5">
+            
             Start a project <ArrowRight size={16} />
           </Link>
           <a href="mailto:lc@lconnectiq.com" className="text-[15px] text-gold-soft hover:text-white transition-colors">
@@ -38,6 +38,6 @@ export default function CTABand() {
           </a>
         </div>
       </Reveal>
-    </section>
-  );
+    </section>);
+
 }
