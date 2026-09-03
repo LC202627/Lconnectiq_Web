@@ -18,7 +18,7 @@ export default function IntroSplash() {
           key="intro-splash"
           className="fixed inset-0 z-[100] flex items-center justify-center"
           initial={{ backgroundColor: "#000000" }}
-          animate={{ backgroundColor: "#2c2e45" }}
+          animate={{ backgroundColor: "#000000" }}
           exit={{ opacity: 0, transition: { duration: 0.7, ease: "easeInOut" } }}
           transition={{ duration: 4.8, ease: "easeInOut" }}
         >
