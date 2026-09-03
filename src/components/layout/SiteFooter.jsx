@@ -11,10 +11,7 @@ export default function SiteFooter() {
           <div className="max-w-[42ch]">
             <Logo className="h-20 w-[300px] -ml-6" inverted />
             <p className="text-sm mt-5 text-white/55">
-              Tallahassee, Florida &middot;{" "}
-              <a href="mailto:lc@lconnectiq.com" className="text-gold-soft hover:text-white transition-colors">
-                lc@lconnectiq.com
-              </a>
+              Tallahassee, Florida
             </p>
           </div>
           <nav className="flex flex-wrap gap-x-7 gap-y-3 md:justify-end">

@@ -33,9 +33,6 @@ export default function CTABand() {
             
             Start a project <ArrowRight size={16} />
           </Link>
-          <a href="mailto:lc@lconnectiq.com" className="text-[15px] text-gold-soft hover:text-white transition-colors">
-            lc@lconnectiq.com
-          </a>
         </div>
       </Reveal>
     </section>);

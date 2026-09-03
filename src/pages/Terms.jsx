@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PageHeader from "@/components/shared/PageHeader";
 import LegalSection from "@/components/shared/LegalSection";
 import Reveal from "@/components/shared/Reveal";
@@ -102,7 +103,7 @@ export default function Terms() {
           <LegalSection heading="13. Contact">
             <p>
               Questions about these terms:{" "}
-              <a href="mailto:lc@lconnectiq.com" className="text-gold-deep font-medium">lc@lconnectiq.com</a>{" "}
+              <Link to="/contact" className="text-gold-deep font-medium">contact us here</Link>{" "}
               &middot; LConnectiQ, LLC, Tallahassee, Florida.
             </p>
           </LegalSection>

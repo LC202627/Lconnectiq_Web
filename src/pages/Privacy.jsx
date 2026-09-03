@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PageHeader from "@/components/shared/PageHeader";
 import LegalSection from "@/components/shared/LegalSection";
 import Reveal from "@/components/shared/Reveal";
@@ -93,8 +94,8 @@ export default function Privacy() {
           <LegalSection heading="10. Your choices and rights">
             <p>
               You may ask us to access, correct, or delete the personal information we hold about
-              you, or to stop sending you marketing, by emailing{" "}
-              <a href="mailto:lc@lconnectiq.com" className="text-gold-deep font-medium">lc@lconnectiq.com</a>.
+              you, or to stop sending you marketing, via our{" "}
+              <Link to="/contact" className="text-gold-deep font-medium">contact page</Link>.
               Depending on where you live, you may have additional rights under local law; we will
               honor valid requests as required.
             </p>
@@ -115,7 +116,7 @@ export default function Privacy() {
           <LegalSection heading="14. Contact">
             <p>
               Questions about this policy:{" "}
-              <a href="mailto:lc@lconnectiq.com" className="text-gold-deep font-medium">lc@lconnectiq.com</a>{" "}
+              <Link to="/contact" className="text-gold-deep font-medium">contact us here</Link>{" "}
               &middot; LConnectiQ, LLC, Tallahassee, Florida.
             </p>
           </LegalSection>
