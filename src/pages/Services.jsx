@@ -1,16 +1,8 @@
 import React from "react";
 import PageHeader from "@/components/shared/PageHeader";
 import CTABand from "@/components/shared/CTABand";
-import Reveal from "@/components/shared/Reveal";
 import ServiceCard from "@/components/services/ServiceCard";
 import { SERVICES } from "@/components/services/servicesData";
-
-const ROADMAP = [
-  "IoT Integration Consulting",
-  "Digital Twin Development",
-  "Smart-Facility Documentation",
-  "Building-Data Intelligence",
-];
 
 export default function Services() {
   return (
@@ -27,22 +19,6 @@ export default function Services() {
               <ServiceCard key={s.idx} service={s} delay={i * 0.05} full />
             ))}
           </div>
-
-          <Reveal delay={0.15} className="mt-12">
-            <div className="text-xs font-semibold tracking-[0.1em] uppercase text-ink-soft mb-4">
-              On the roadmap (Years 4–5)
-            </div>
-            <div className="flex flex-wrap gap-2.5">
-              {ROADMAP.map((r) => (
-                <span
-                  key={r}
-                  className="text-sm font-medium text-navy bg-white border border-navy/10 px-4 py-2.5 rounded-sm transition-colors duration-200 hover:border-gold-deep hover:text-gold-deep"
-                >
-                  {r}
-                </span>
-              ))}
-            </div>
-          </Reveal>
         </div>
       </section>
       <CTABand />
