@@ -1,12 +1,49 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Eyebrow from "@/components/shared/Eyebrow";
 
+const HERO_VIDEO =
+  "https://media.base44.com/videos/public/user_69efa00d86253571e2232b14/6f829cd56_ElevenLabs_video_flux-3_createadrone_2026-08-22T08_25_29.mp4";
+
+const OVERLAY =
+  "radial-gradient(120% 120% at 75% 10%, rgba(25,26,41,.55) 0%, rgba(25,26,41,.72) 45%, rgba(15,16,25,.9) 100%)";
+
 export default function Hero() {
+  const videoRef = useRef(null);
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReduceMotion(mq.matches);
+    const onChange = () => setReduceMotion(mq.matches);
+    mq.addEventListener?.("change", onChange);
+    return () => mq.removeEventListener?.("change", onChange);
+  }, []);
+
+  useEffect(() => {
+    if (reduceMotion && videoRef.current) videoRef.current.pause();
+  }, [reduceMotion]);
+
   return (
     <header className="relative min-h-screen flex items-end overflow-hidden bg-navy">
+      {/* Background video */}
+      {!reduceMotion && (
+        <div className="absolute inset-0 z-0">
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={HERO_VIDEO} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0" style={{ background: OVERLAY }} />
+        </div>
+      )}
 
       <div
         className="absolute inset-0 z-[1]"
