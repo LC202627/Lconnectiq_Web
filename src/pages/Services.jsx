@@ -5,7 +5,12 @@ import Reveal from "@/components/shared/Reveal";
 import ServiceCard from "@/components/services/ServiceCard";
 import { SERVICES } from "@/components/services/servicesData";
 
-const ROADMAP = ["IoT Integration Consulting", "Digital Twin Development"];
+const ROADMAP = [
+  "IoT Integration Consulting",
+  "Digital Twin Development",
+  "Smart-Facility Documentation",
+  "Building-Data Intelligence",
+];
 
 export default function Services() {
   return (
@@ -25,7 +30,7 @@ export default function Services() {
 
           <Reveal delay={0.15} className="mt-12">
             <div className="text-xs font-semibold tracking-[0.1em] uppercase text-ink-soft mb-4">
-              On the roadmap (Years 3–5)
+              On the roadmap (Years 4–5)
             </div>
             <div className="flex flex-wrap gap-2.5">
               {ROADMAP.map((r) => (

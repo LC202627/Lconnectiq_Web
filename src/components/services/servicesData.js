@@ -17,7 +17,7 @@ export const SERVICES = [
     title: "Remote Project Engineering",
     tag: "Execution support",
     summary:
-      "Dedicated off-site project engineering capacity that scales with your workload, without the overhead of a new hire.",
+      "Variable-capacity, remote project engineering support that scales with your workload, without the overhead of a new hire.",
     points: [
       "Schedule & deliverable tracking support",
       "Meeting minutes, action logs & follow-up",
@@ -41,9 +41,9 @@ export const SERVICES = [
   {
     idx: "04",
     title: "BIM & CAD Support",
-    tag: "Design production",
+    tag: "Production support",
     summary:
-      "Permit-ready, construction-ready production drawings and intelligent models that surface conflicts before they reach the jobsite.",
+      "Construction-ready production drawings and intelligent models that surface conflicts before they reach the jobsite — production assistance, never professional design.",
     points: [
       "Structural CAD drafting: foundations, framing & details",
       "Coordination models, clash detection & constructability review",
@@ -53,14 +53,14 @@ export const SERVICES = [
   },
   {
     idx: "05",
-    title: "Digital Productivity Services",
-    tag: "Digital enablement",
+    title: "AI Productivity Services",
+    tag: "Controlled assistance",
     summary:
-      "Practical, human-supervised technology adoption for construction teams, productivity gains without handing judgment to a machine.",
+      "Controlled assistance, not delegated judgment: human-supervised AI for knowledge search, summaries, and drafting support.",
     points: [
-      "Assisted document review & summarization",
-      "Reporting & knowledge workflows",
-      "Prompt libraries & team enablement",
+      "Knowledge search, meeting summaries & proposal draft support",
+      "Specification search, report generation & email drafting",
+      "Contract-review assistance for responsible parties",
       "Human review on every deliverable",
     ],
   },

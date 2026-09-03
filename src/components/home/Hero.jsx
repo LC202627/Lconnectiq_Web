@@ -83,9 +83,9 @@ export default function Hero() {
           className="text-white/85 text-[clamp(16px,2.1vw,21px)] max-w-[54ch] mt-6"
         >
           LConnectiQ is your construction back office: document management, remote project
-          engineering, Procore administration, BIM &amp; CAD support, digital productivity, and
-          workflow automation, so your projects move faster, cleaner, and with less administrative
-          risk.
+          engineering, Procore administration, BIM &amp; CAD support, AI productivity services,
+          and workflow automation, so your projects move faster, cleaner, and with less
+          administrative risk.
         </motion.p>
 
         <motion.div

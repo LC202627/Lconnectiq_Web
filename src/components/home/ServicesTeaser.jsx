@@ -16,8 +16,8 @@ export default function ServicesTeaser() {
             Six service lines, one standard.
           </h2>
           <p className="text-ink-soft text-lg">
-            Your construction back office: document control and project engineering through BIM,
-            digital productivity, and workflow automation.
+            Your construction back office: from document control and remote project engineering to
+            BIM/CAD, AI productivity, and workflow automation.
           </p>
         </Reveal>
 

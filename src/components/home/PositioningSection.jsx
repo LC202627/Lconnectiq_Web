@@ -23,9 +23,10 @@ export default function PositioningSection() {
         </Reveal>
         <Reveal delay={0.1} className="space-y-5">
           <p className="text-ink-soft text-[17px] leading-relaxed">
-            LConnectiQ is a Florida-based Construction Support Services firm. We don't design and we
-            don't manage construction; we execute and structure, so authority stays with the
-            professionals who own it while the information chain stays clean.
+            LConnectiQ is a construction back-office and workflow support company serving the AEC
+            industry, based in Tallahassee and delivering across the Southeast. We don't design
+            and we don't manage construction; we execute and structure, so authority stays with
+            the professionals who own it while the information chain stays clean.
           </p>
           <p className="text-ink-soft text-[17px] leading-relaxed">
             Most teams already pay for powerful platforms (Procore, BIM tools, cloud drives) but

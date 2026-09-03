@@ -9,7 +9,7 @@ const SERVICES = [
   "Remote Project Engineering",
   "Procore Administration",
   "BIM & CAD Support",
-  "Digital Productivity Services",
+  "AI Productivity Services",
   "Workflow Automation",
   "Not sure, need a consultation",
 ];

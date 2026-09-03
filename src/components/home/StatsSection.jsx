@@ -6,7 +6,7 @@ export default function StatsSection() {
     <section className="bg-white py-16 md:py-20 border-y border-navy/5">
       <div className="max-w-[1240px] mx-auto px-6 md:px-7 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
         <AnimatedStat value={6} label="Service lines, one standard" />
-        <AnimatedStat value={100} suffix="%" label="Audit-ready document traceability" />
+        <AnimatedStat value={100} suffix="%" label="Human-supervised delivery on every engagement" />
         <div className="border-l-2 border-gold pl-5">
           <div className="text-navy text-[clamp(38px,5vw,60px)] font-extrabold leading-none tracking-tight tabular-nums">
             2025

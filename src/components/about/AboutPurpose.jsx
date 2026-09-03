@@ -4,7 +4,7 @@ import Reveal from "@/components/shared/Reveal";
 
 const SERVING = [
   "General Contractors",
-  "Structural Engineers",
+  "Architects & Engineers",
   "Developers",
   "Subcontractors",
   "Owner's Representatives",
