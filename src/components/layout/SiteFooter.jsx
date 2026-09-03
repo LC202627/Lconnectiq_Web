@@ -17,7 +17,6 @@ export default function SiteFooter() {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6">
           <div className="flex flex-col items-center md:items-start gap-1">
-            <span className="text-sm text-white/55">Tallahassee, Florida</span>
             <span className="text-xs">
               &copy; {new Date().getFullYear()} LConnectiQ, LLC
             </span>

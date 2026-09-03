@@ -13,7 +13,7 @@ export default function Privacy() {
           <LegalSection heading="1. Who we are">
             <p>
               LConnectiQ, LLC ("LConnectiQ," "we," "us") is a Florida limited liability company
-              headquartered in Tallahassee, Florida, providing Construction Support Services. This
+              providing Construction Support Services. This
               policy explains, in plain language, what information we collect through this website,
               how we use it, and the choices you have.
             </p>
@@ -117,7 +117,7 @@ export default function Privacy() {
             <p>
               Questions about this policy:{" "}
               <Link to="/contact" className="text-gold-deep font-medium">contact us here</Link>{" "}
-              &middot; LConnectiQ, LLC, Tallahassee, Florida.
+              &middot; LConnectiQ, LLC.
             </p>
           </LegalSection>
         </Reveal>

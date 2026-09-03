@@ -104,7 +104,7 @@ export default function Terms() {
             <p>
               Questions about these terms:{" "}
               <Link to="/contact" className="text-gold-deep font-medium">contact us here</Link>{" "}
-              &middot; LConnectiQ, LLC, Tallahassee, Florida.
+              &middot; LConnectiQ, LLC.
             </p>
           </LegalSection>
         </Reveal>

@@ -27,10 +27,6 @@ export default function Contact() {
           </p>
           <div className="flex flex-wrap gap-7 mt-7">
             <div>
-              <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-gold-soft">Headquarters</div>
-              <div className="text-[15px] text-white font-medium mt-1">Tallahassee, Florida</div>
-            </div>
-            <div>
               <div className="text-[11px] font-bold tracking-[0.1em] uppercase text-gold-soft">Response time</div>
               <div className="text-[15px] text-white font-medium mt-1">Within 1 business day</div>
             </div>
