@@ -13,9 +13,10 @@ export default function Privacy() {
           <LegalSection heading="1. Who we are">
             <p>
               Lymnea Group LLC, doing business as LConnectiQ (&ldquo;LConnectiQ,&rdquo;
-              &ldquo;we,&rdquo; or &ldquo;us&rdquo;), is a Florida limited liability company that
-              provides construction support services. This policy explains, in plain language, what
-              information we collect through this website, how we use it, and the choices you have.
+              &ldquo;we,&rdquo; or &ldquo;us&rdquo;), is a Florida limited liability company located
+              at 177 SW Range Ave, Madison, FL 32340, that provides construction support services.
+              This policy explains, in plain language, what information we collect through this
+              website, how we use it, and the choices you have.
             </p>
           </LegalSection>
 
@@ -40,7 +41,7 @@ export default function Privacy() {
               <li>To respond to your inquiry and discuss your project.</li>
               <li>To provide and administer our services if you become a client.</li>
               <li>To improve this website and understand how visitors use it.</li>
-              <li>To send you information about our services, only where permitted — you can opt out at any time.</li>
+              <li>To send you information about our services, only where permitted. You can opt out at any time.</li>
               <li>To comply with legal obligations.</li>
             </ul>
           </LegalSection>
@@ -51,9 +52,9 @@ export default function Privacy() {
 
           <LegalSection heading="5. Sharing">
             <p>
-              We share information only with service providers that help us operate — such as our
+              We share information only with service providers that help us operate (such as our
               email and productivity platform, our website hosting provider, and our form-processing
-              service — and only so they can perform those functions. We may also disclose
+              service), and only so they can perform those functions. We may also disclose
               information if required by law, or as part of a business transaction such as a merger
               or sale, in which case this policy would continue to apply to your information.
             </p>
@@ -117,7 +118,7 @@ export default function Privacy() {
             <p>
               Questions about this policy:{" "}
               <Link to="/contact" className="text-gold-deep font-medium">contact us here</Link>{" "}
-              &middot; Lymnea Group LLC dba LConnectiQ.
+              &middot; Lymnea Group LLC dba LConnectiQ &middot; 177 SW Range Ave, Madison, FL 32340.
             </p>
           </LegalSection>
         </Reveal>

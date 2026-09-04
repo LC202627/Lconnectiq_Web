@@ -19,9 +19,8 @@ export default function Terms() {
               This website is informational. It describes the services of Lymnea Group LLC, doing
               business as LConnectiQ (&ldquo;LConnectiQ,&rdquo; &ldquo;we,&rdquo; or &ldquo;us&rdquo;),
               and lets you contact us. Actual services are provided only under separate written
-              agreements —
-              such as a Master Services Agreement and Scope of Work — signed by both parties.
-              Nothing on this site is an offer that can be accepted to form a contract, and
+              agreements (such as a Master Services Agreement and Scope of Work) signed by both
+              parties. Nothing on this site is an offer that can be accepted to form a contract, and
               submitting an inquiry does not create a client relationship.
             </p>
           </LegalSection>
@@ -57,7 +56,7 @@ export default function Terms() {
 
           <LegalSection heading="6. Acceptable use">
             <p>
-              You agree not to misuse the site — including attempting to breach security,
+              You agree not to misuse the site, including attempting to breach security,
               submitting false or unlawful content through our forms, or interfering with the
               site's operation.
             </p>
@@ -106,7 +105,7 @@ export default function Terms() {
             <p>
               Questions about these terms:{" "}
               <Link to="/contact" className="text-gold-deep font-medium">contact us here</Link>{" "}
-              &middot; Lymnea Group LLC dba LConnectiQ.
+              &middot; Lymnea Group LLC dba LConnectiQ &middot; 177 SW Range Ave, Madison, FL 32340.
             </p>
           </LegalSection>
         </Reveal>

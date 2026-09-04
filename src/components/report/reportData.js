@@ -1,4 +1,4 @@
-// Interface audit data for LConnectiQ — screen-by-screen review.
+// Interface audit data for LConnectiQ, screen-by-screen review.
 // Balanced across Design & Brand and UX & Usability.
 
 export const REPORT_META = {
@@ -21,7 +21,7 @@ export const TOP_PRIORITIES = [
     n: "01",
     title: "Fix the en-dash rendering on Services",
     detail:
-      "“Years 3&ndash;5” prints the literal text “&ndash;” instead of an en-dash because React does not decode HTML entities in plain text. Replace with “Years 3–5”.",
+      "“Years 3&ndash;5” prints the literal text “&ndash;” instead of an en-dash because React does not decode HTML entities in plain text. Replace with “Years 3 to 5”.",
   },
   {
     n: "02",
@@ -84,17 +84,17 @@ export const SCREENS = [
       strengths: [
         "Aerospace hero holds together: drone video, gold grid overlay, and radial mask give a strong high-tech first impression.",
         "Navy/gold palette and Instrument Serif headings are consistent across hero, stats, and teaser.",
-        "Stats band is restrained and legible — count-up animation, gold rule, tabular numerals.",
+        "Stats band is restrained and legible, count-up animation, gold rule, tabular numerals.",
       ],
       issues: [
-        "Hero headline still reads “Leadership. Intelligence. Connection.” — inconsistent with the site-wide decision to drop the tagline.",
+        "Hero headline still reads “Leadership. Intelligence. Connection.”, inconsistent with the site-wide decision to drop the tagline.",
         "H1 is Instrument Serif pushed to font-extrabold uppercase, a heavy combination that can read stodgy for a “technology” brand.",
-        "On mobile the video is hidden (sm:block), so small screens get a plain navy block — the tech visual is lost where most traffic lands.",
+        "On mobile the video is hidden (sm:block), so small screens get a plain navy block, the tech visual is lost where most traffic lands.",
       ],
     },
     ux: {
       strengths: [
-        "Two clear CTAs — “Explore services” and “Start a project” — with a sensible primary/secondary hierarchy.",
+        "Two clear CTAs, “Explore services” and “Start a project”, with a sensible primary/secondary hierarchy.",
         "Scroll-reveal animations pace the page without delaying content.",
         "New mobile bottom bar gives one-tap access to the five core destinations.",
       ],
@@ -118,13 +118,13 @@ export const SCREENS = [
       "Company identity and philosophy: purpose, the problem we solve, how we work, and why us.",
     design: {
       strengths: [
-        "Narrative flow is strong — purpose → problem → answer → why → CTA reads as a single argument.",
+        "Narrative flow is strong, purpose → problem → answer → why → CTA reads as a single argument.",
         "Problem cards share a consistent gold-numbered system with the Services and Why sections.",
         "Mist/white alternation between Problem and Why gives the long page rhythm.",
       ],
       issues: [
-        "AboutPurpose and ProblemSection are both white with similar card grids — the first two screens blur together.",
-        "Dead classes py-6.5 and pt-4.5 appear in the Problem and Why sections — invalid scales masked by arbitrary px values.",
+        "AboutPurpose and ProblemSection are both white with similar card grids, the first two screens blur together.",
+        "Dead classes py-6.5 and pt-4.5 appear in the Problem and Why sections, invalid scales masked by arbitrary px values.",
         "VideoStrip is a welcome break but has no visible label or caption context.",
       ],
     },
@@ -159,9 +159,9 @@ export const SCREENS = [
         "Roadmap tags are visually distinct from live services.",
       ],
       issues: [
-        "“On the roadmap (Years 3&ndash;5)” prints the literal “&ndash;” — React does not decode entities in text.",
+        "“On the roadmap (Years 3&ndash;5)” prints the literal “&ndash;”, React does not decode entities in text.",
         "Roadmap items are flat tags with no expansion or timeline context.",
-        "No imagery or iconography per service — the page is text-dense for a technology firm.",
+        "No imagery or iconography per service, the page is text-dense for a technology firm.",
       ],
     },
     ux: {
@@ -171,12 +171,12 @@ export const SCREENS = [
       ],
       issues: [
         "No filter, search, or comparison across the six lines.",
-        "No engagement model, turnaround, or pricing guidance — visitors must inquire to learn basics.",
+        "No engagement model, turnaround, or pricing guidance, visitors must inquire to learn basics.",
         "Roadmap items are not actionable or dated.",
       ],
     },
     fixes: [
-      "Replace “&ndash;” with a real en-dash (Years 3–5).",
+      "Replace “&ndash;” with a real en-dash (Years 3 to 5).",
       "Add per-service icons or a small isometric visual to reduce text weight.",
       "Add a short engagement/turnaround hint per service to pre-qualify inquiries.",
     ],
@@ -194,7 +194,7 @@ export const SCREENS = [
         "Detail pages exist for each project, so the grid is a real index, not a dead end.",
       ],
       issues: [
-        "No sector/category filtering — all seven projects render in one flat list.",
+        "No sector/category filtering, all seven projects render in one flat list.",
         "Cards show only title and meta; no client, scale, or outcome to differentiate work.",
         "No project count or summary line to frame the selection.",
       ],
@@ -230,7 +230,7 @@ export const SCREENS = [
       ],
       issues: [
         "Placeholder text at white/40 on translucent fields may fall below contrast on some screens.",
-        "Radix Select dropdown is white — good contrast, but the trigger sits low-contrast against the dark form.",
+        "Radix Select dropdown is white, good contrast, but the trigger sits low-contrast against the dark form.",
         "No visual grouping of required vs. optional fields.",
       ],
     },
@@ -241,7 +241,7 @@ export const SCREENS = [
         "HQ, response time, and service-line count set expectations up front.",
       ],
       issues: [
-        "No inline success panel — the form clears and the button flips, but the form still occupies the screen.",
+        "No inline success panel, the form clears and the button flips, but the form still occupies the screen.",
         "No privacy/consent note near the submit, common for B2B intake.",
         "No optional phone or budget field to triage inquiries faster.",
       ],
@@ -265,9 +265,9 @@ export const SCREENS = [
         "Destructive button styling is clear and distinct from logout.",
       ],
       issues: [
-        "Profile falls back to “LConnectiQ member” when no name is set — a blunt placeholder.",
+        "Profile falls back to “LConnectiQ member” when no name is set, a blunt placeholder.",
         "No avatar or identity visual beyond a generic user icon.",
-        "The screen is bare compared to the rest of the site — no account metadata or history.",
+        "The screen is bare compared to the rest of the site, no account metadata or history.",
       ],
     },
     ux: {
@@ -276,7 +276,7 @@ export const SCREENS = [
         "Mobile bottom bar exposes the screen in one tap.",
       ],
       issues: [
-        "Not reachable on desktop — no header or footer link to /settings.",
+        "Not reachable on desktop, no header or footer link to /settings.",
         "Profile is read-only; there is no way to edit name via updateMe.",
         "Delete relies on removing the user record; no warning that inquiries remain.",
       ],

@@ -50,8 +50,8 @@ export default function Hero() {
         className="absolute inset-0 z-[1]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(212,175,55,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,.14) 1px, transparent 1px)",
-          backgroundSize: "160px 160px, 160px 160px",
+            "linear-gradient(rgba(212,175,55,.14) 1px, transparent 1px)",
+          backgroundSize: "160px 160px",
           maskImage: "radial-gradient(120% 100% at 70% 30%, #000 30%, transparent 85%)",
           WebkitMaskImage: "radial-gradient(120% 100% at 70% 30%, #000 30%, transparent 85%)",
         }}

@@ -43,7 +43,7 @@ export const SERVICES = [
     title: "BIM & CAD Support",
     tag: "Production support",
     summary:
-      "Construction-ready production drawings and intelligent models that surface conflicts before they reach the jobsite — production assistance, never professional design.",
+      "Construction-ready production drawings and intelligent models that surface conflicts before they reach the jobsite. Production assistance, never professional design.",
     points: [
       "Structural CAD drafting: foundations, framing & details",
       "Coordination models, clash detection & constructability review",

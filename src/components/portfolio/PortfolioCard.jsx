@@ -11,7 +11,7 @@ export default function PortfolioCard({ item, delay = 0 }) {
         <div className="aspect-[16/10] rounded-[3px] overflow-hidden relative bg-[#07080d] border border-navy/10 [filter:saturate(1.08)_contrast(1.04)]">
           <Image
             src={item.image}
-            alt={`${item.title} — structural BIM model by LConnectiQ`}
+            alt={`${item.title}, structural BIM model by LConnectiQ`}
             quality={95}
             className="w-full h-full transition-transform duration-700 group-hover:scale-105"
           />

@@ -60,8 +60,8 @@ export default function ContactForm() {
         </div>
         <h3 className="text-white font-bold text-2xl mt-5">Inquiry sent</h3>
         <p className="text-white text-[15px] mt-2.5 max-w-[42ch] mx-auto leading-relaxed">
-          Thanks — we&apos;ll respond within one business day with a clear scope, defined deliverables, and
-          no ambiguity about what we do and don&apos;t cover.
+          Thanks. We&apos;ll respond within one business day with a clear scope, defined deliverables,
+          and no ambiguity about what we do and don&apos;t cover.
         </p>
         <button
           onClick={() => setSent(false)}

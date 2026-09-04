@@ -9,7 +9,7 @@ export const PORTFOLIO_ITEMS = [
     image: `${BASE}dc47b438a_AdministrativeBuilding.png`,
     location: "Tallahassee, FL",
     summary:
-      "Isometric structural model of a multi-part administrative complex — a vertical tower, wide podium, and a box-like utility block — documenting the exposed concrete and steel framing for coordination review.",
+      "Isometric structural model of a multi-part administrative complex with a vertical tower, wide podium, and a box-like utility block, documenting the exposed concrete and steel framing for coordination review.",
     specs: {
       "Structural system": "Cast-in-place concrete + exposed steel framing",
       Scope: "Structural BIM coordination model",

@@ -17,6 +17,7 @@ export default function SiteFooter() {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6">
           <div className="flex flex-col items-center md:items-start gap-1">
+            <span className="text-xs">177 SW Range Ave, Madison, FL 32340</span>
             <span className="text-xs">
               &copy; {new Date().getFullYear()} Lymnea Group LLC dba LConnectiQ
             </span>

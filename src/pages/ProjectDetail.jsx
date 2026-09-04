@@ -52,7 +52,7 @@ export default function ProjectDetail() {
           <div className="relative aspect-[16/9] rounded-[3px] overflow-hidden bg-[#07080d] border border-navy/10 [filter:saturate(1.08)_contrast(1.04)]">
             <Image
               src={project.image}
-              alt={`${project.title} — structural BIM model by LConnectiQ`}
+              alt={`${project.title}, structural BIM model by LConnectiQ`}
               fittingType="fit"
               quality={97}
               className="absolute inset-0 w-full h-full"

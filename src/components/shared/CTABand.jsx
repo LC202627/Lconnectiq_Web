@@ -7,15 +7,6 @@ import Reveal from "@/components/shared/Reveal";
 export default function CTABand() {
   return (
     <section className="relative overflow-hidden bg-navy py-20 md:py-24">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: "linear-gradient(90deg, rgba(212,175,55,.16) 1px, transparent 1px)",
-          backgroundSize: "80px 100%",
-          maskImage: "linear-gradient(90deg, transparent, #000 60%)",
-          WebkitMaskImage: "linear-gradient(90deg, transparent, #000 60%)"
-        }} />
-      
       <Reveal className="relative z-10 max-w-[1240px] mx-auto px-6 md:px-7 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <Eyebrow dark>Start a project</Eyebrow>
