@@ -8,7 +8,7 @@ const HERO_VIDEO =
   "https://media.base44.com/videos/public/user_69efa00d86253571e2232b14/6f829cd56_ElevenLabs_video_flux-3_createadrone_2026-08-22T08_25_29.mp4";
 
 const OVERLAY =
-  "radial-gradient(120% 120% at 75% 10%, rgba(25,26,41,.55) 0%, rgba(25,26,41,.72) 45%, rgba(15,16,25,.9) 100%)";
+  "radial-gradient(120% 120% at 75% 8%, rgba(20,22,42,.32) 0%, rgba(20,22,42,.55) 48%, rgba(12,14,26,.82) 100%)";
 
 export default function Hero() {
   const videoRef = useRef(null);
@@ -27,17 +27,18 @@ export default function Hero() {
   }, [reduceMotion]);
 
   return (
-    <header className="relative min-h-screen flex items-end overflow-hidden bg-navy">
+    <header className="relative min-h-screen flex items-end overflow-hidden bg-black">
       {/* Background video */}
       {!reduceMotion && (
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-black">
           <video
             ref={videoRef}
             autoPlay
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover [filter:contrast(1.08)_saturate(1.12)_brightness(1.02)]"
           >
             <source src={HERO_VIDEO} type="video/mp4" />
           </video>
@@ -49,7 +50,7 @@ export default function Hero() {
         className="absolute inset-0 z-[1]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(138,114,38,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(138,114,38,.07) 1px, transparent 1px)",
+            "linear-gradient(rgba(212,175,55,.14) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,.14) 1px, transparent 1px)",
           backgroundSize: "160px 160px, 160px 160px",
           maskImage: "radial-gradient(120% 100% at 70% 30%, #000 30%, transparent 85%)",
           WebkitMaskImage: "radial-gradient(120% 100% at 70% 30%, #000 30%, transparent 85%)",
@@ -80,7 +81,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.45, ease: [0.22, 0.61, 0.36, 1] }}
-          className="text-white/85 text-[clamp(16px,2.1vw,21px)] max-w-[54ch] mt-6"
+          className="text-white text-[clamp(16px,2.1vw,21px)] max-w-[54ch] mt-6"
         >
           LConnectiQ is your construction back office: document management, remote project
           engineering, Procore administration, BIM &amp; CAD support, AI productivity services,
@@ -96,7 +97,7 @@ export default function Hero() {
         >
           <a
             href="#services-teaser"
-            className="inline-flex items-center gap-2.5 font-semibold text-[15px] rounded-sm bg-gold-soft text-navy px-7 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white"
+            className="inline-flex items-center gap-2.5 font-semibold text-[15px] rounded-sm bg-gold-soft text-navy px-7 py-4 shadow-[0_8px_30px_-6px_rgba(240,214,126,0.55)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_10px_36px_-4px_rgba(255,255,255,0.5)]"
           >
             Explore services <ArrowRight size={16} />
           </a>

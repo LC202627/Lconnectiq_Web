@@ -15,7 +15,7 @@ const SERVICES = [
 ];
 
 const inputCls =
-  "w-full bg-white/[0.06] border border-white/[0.16] rounded-sm px-3.5 py-3 text-white placeholder:text-white/55 text-[15px] transition-colors duration-200 focus:outline-none focus:border-gold-soft";
+  "w-full bg-white/[0.10] border border-white/[0.24] rounded-sm px-3.5 py-3 text-white placeholder:text-white/70 text-[15px] transition-colors duration-200 focus:outline-none focus:border-gold-soft";
 
 export default function ContactForm() {
   const { toast } = useToast();
@@ -59,7 +59,7 @@ export default function ContactForm() {
           <Check size={28} />
         </div>
         <h3 className="text-white font-bold text-2xl mt-5">Inquiry sent</h3>
-        <p className="text-white/70 text-[15px] mt-2.5 max-w-[42ch] mx-auto leading-relaxed">
+        <p className="text-white text-[15px] mt-2.5 max-w-[42ch] mx-auto leading-relaxed">
           Thanks — we&apos;ll respond within one business day with a clear scope, defined deliverables, and
           no ambiguity about what we do and don&apos;t cover.
         </p>
@@ -77,13 +77,13 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="bg-white/[0.05] border border-white/[0.16] rounded-sm p-8 md:p-9">
       <div className="grid grid-cols-2 gap-3.5 mb-4">
         <div>
-          <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
+          <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/90 mb-1.5">
             First name
           </label>
           <input required value={form.first_name} onChange={update("first_name")} className={inputCls} />
         </div>
         <div>
-          <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
+          <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/90 mb-1.5">
             Last name
           </label>
           <input required value={form.last_name} onChange={update("last_name")} className={inputCls} />
@@ -109,7 +109,7 @@ export default function ContactForm() {
           Service needed
         </label>
         <Select value={form.service} onValueChange={(v) => setForm((f) => ({ ...f, service: v }))}>
-          <SelectTrigger className={`${inputCls} h-auto py-3 data-[placeholder]:text-white/55`}>
+          <SelectTrigger className={`${inputCls} h-auto py-3 data-[placeholder]:text-white/70`}>
             <SelectValue placeholder="Select a service…" />
           </SelectTrigger>
           <SelectContent className="max-h-72">
@@ -135,7 +135,7 @@ export default function ContactForm() {
         />
       </div>
 
-      <p className="text-[12px] text-white/45 mb-5 leading-relaxed">
+      <p className="text-[12px] text-white/80 mb-5 leading-relaxed">
         We use your details only to respond to this inquiry. See our{" "}
         <a href="/privacy" className="text-gold-soft hover:text-white transition-colors underline">
           privacy policy

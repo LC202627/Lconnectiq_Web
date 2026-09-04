@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useTransform, animate } from "framer-motion";
 import Logo from "@/components/shared/Logo";
 
-const HOLD = 4000; // black hold before the fade begins
-const FADE = 2200; // black -> white fade duration
+const HOLD = 1600; // black hold before the fade begins
+const FADE = 1800; // black -> white fade duration
 
 export default function IntroSplash() {
   const [done, setDone] = useState(false);
@@ -42,16 +42,32 @@ export default function IntroSplash() {
           exit={{ opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
         >
           <motion.div
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 2.2, opacity: 1 }}
-            transition={{ duration: 4.6, delay: 0.25, ease: [0.22, 0.61, 0.36, 1] }}
+            initial={{ scale: 0.6, opacity: 0 }}
+            animate={{ scale: 2, opacity: 1 }}
+            transition={{ duration: 3.4, delay: 0.2, ease: [0.22, 0.61, 0.36, 1] }}
             className="relative"
           >
-            <motion.div style={{ opacity: lightLogoOpacity }}>
-              <Logo className="h-16 w-[250px]" inverted />
+            {/* Radiant halo behind the mark */}
+            <motion.div
+              className="absolute -inset-28 rounded-full blur-3xl"
+              style={{ opacity: lightLogoOpacity }}
+              animate={{ scale: [1, 1.14, 1] }}
+              transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <div className="w-full h-full rounded-full bg-[radial-gradient(circle,rgba(255,236,180,0.7)_0%,rgba(240,214,126,0.35)_40%,transparent_72%)]" />
             </motion.div>
-            <motion.div className="absolute inset-0" style={{ opacity: darkLogoOpacity }}>
-              <Logo className="h-16 w-[250px]" />
+
+            <motion.div
+              style={{ opacity: lightLogoOpacity }}
+              className="relative [filter:brightness(1.25)_drop-shadow(0_0_22px_rgba(255,240,200,0.9))_drop-shadow(0_0_54px_rgba(240,214,126,0.6))]"
+            >
+              <Logo className="h-20 w-[320px]" inverted />
+            </motion.div>
+            <motion.div
+              className="absolute inset-0 [filter:drop-shadow(0_0_20px_rgba(212,175,55,0.4))]"
+              style={{ opacity: darkLogoOpacity }}
+            >
+              <Logo className="h-20 w-[320px]" />
             </motion.div>
           </motion.div>
         </motion.div>

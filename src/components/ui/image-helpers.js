@@ -3,7 +3,7 @@ const WIX_MEDIA_HOSTS = {
   "static.wixstatic.com": "/media/",
 }
 
-export const DEFAULT_TRANSFORM_WIDTH = 1024
+export const DEFAULT_TRANSFORM_WIDTH = 1600
 export const IMAGE_LOAD_MODE = {
   OPTIMIZED: "optimized",
   ORIGINAL: "original",
@@ -62,7 +62,10 @@ export function buildTransformUrl(
         : "al_c"
     )
   }
-  params.push(`q_${quality}`, "usm_0.66_1.00_0.01", "enc_webp", "quality_auto")
+  // Deterministic high-quality path: explicit quality (no `quality_auto`, which
+  // lets the CDN drop quality), stronger unsharp mask for crisp edges on the
+  // structural renders.
+  params.push(`q_${quality}`, "usm_0.80_1.20_0.02", "enc_webp")
   const outputName = /\.gif$/i.test(filename)
     ? filename
     : filename.replace(/\.[a-z0-9]+$/i, "") + ".webp"

@@ -12,10 +12,10 @@ export default function Privacy() {
         <Reveal className="max-w-[860px] mx-auto px-6">
           <LegalSection heading="1. Who we are">
             <p>
-              LConnectiQ, LLC ("LConnectiQ," "we," "us") is a Florida limited liability company
-              providing Construction Support Services. This
-              policy explains, in plain language, what information we collect through this website,
-              how we use it, and the choices you have.
+              Lymnea Group LLC, doing business as LConnectiQ (&ldquo;LConnectiQ,&rdquo;
+              &ldquo;we,&rdquo; or &ldquo;us&rdquo;), is a Florida limited liability company that
+              provides construction support services. This policy explains, in plain language, what
+              information we collect through this website, how we use it, and the choices you have.
             </p>
           </LegalSection>
 
@@ -117,7 +117,7 @@ export default function Privacy() {
             <p>
               Questions about this policy:{" "}
               <Link to="/contact" className="text-gold-deep font-medium">contact us here</Link>{" "}
-              &middot; LConnectiQ, LLC.
+              &middot; Lymnea Group LLC dba LConnectiQ.
             </p>
           </LegalSection>
         </Reveal>

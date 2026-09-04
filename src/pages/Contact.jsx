@@ -9,7 +9,7 @@ export default function Contact() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "linear-gradient(90deg, rgba(138,114,38,.09) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(90deg, rgba(212,175,55,.16) 1px, transparent 1px)",
           backgroundSize: "80px 100%",
           maskImage: "linear-gradient(90deg, transparent, #000 60%)",
           WebkitMaskImage: "linear-gradient(90deg, transparent, #000 60%)",
@@ -21,7 +21,7 @@ export default function Contact() {
           <h1 className="text-white font-extrabold text-[clamp(30px,4.4vw,50px)] leading-tight mt-4">
             Let's talk about your <span className="text-gold-soft">project.</span>
           </h1>
-          <p className="text-white/75 text-lg mt-5 max-w-[52ch]">
+          <p className="text-white text-lg mt-5 max-w-[52ch]">
             We respond within one business day with a clear scope, defined deliverables, and no
             ambiguity about what we do and don't cover.
           </p>

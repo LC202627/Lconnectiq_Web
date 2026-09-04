@@ -16,8 +16,10 @@ export default function Terms() {
 
           <LegalSection heading="2. What this site is">
             <p>
-              This website is informational. It describes the services of LConnectiQ, LLC and lets
-              you contact us. Actual services are provided only under separate written agreements —
+              This website is informational. It describes the services of Lymnea Group LLC, doing
+              business as LConnectiQ (&ldquo;LConnectiQ,&rdquo; &ldquo;we,&rdquo; or &ldquo;us&rdquo;),
+              and lets you contact us. Actual services are provided only under separate written
+              agreements —
               such as a Master Services Agreement and Scope of Work — signed by both parties.
               Nothing on this site is an offer that can be accepted to form a contract, and
               submitting an inquiry does not create a client relationship.
@@ -38,9 +40,9 @@ export default function Terms() {
 
           <LegalSection heading="4. Intellectual property">
             <p>
-              The LConnectiQ name, logo, the tagline "Leadership. Intelligence. Connection.," and
-              all site content, images, and design are owned by LConnectiQ, LLC or used with
-              permission. You may view and print pages for your own business evaluation of our
+              The LConnectiQ name, logo, the tagline &ldquo;Leadership. Intelligence.
+              Connection.,&rdquo; and all site content, images, and design are owned by Lymnea
+              Group LLC or used with permission. You may view and print pages for your own business evaluation of our
               services. You may not copy, scrape, republish, or use our content or marks for any
               other purpose without written permission.
             </p>
@@ -75,7 +77,7 @@ export default function Terms() {
 
           <LegalSection heading="9. Limitation of liability">
             <p>
-              To the fullest extent permitted by law, LConnectiQ, LLC and its members will not be
+              To the fullest extent permitted by law, Lymnea Group LLC and its members will not be
               liable for any indirect, incidental, consequential, or special damages arising from
               your use of this website. Our total liability related to the website will not exceed
               one hundred U.S. dollars ($100). This section does not limit liability that cannot be
@@ -85,7 +87,7 @@ export default function Terms() {
           </LegalSection>
 
           <LegalSection heading="10. Indemnification">
-            <p>You agree to indemnify LConnectiQ, LLC against claims arising from your violation of these terms or misuse of the site.</p>
+            <p>You agree to indemnify Lymnea Group LLC against claims arising from your violation of these terms or misuse of the site.</p>
           </LegalSection>
 
           <LegalSection heading="11. Governing law and venue">
@@ -104,7 +106,7 @@ export default function Terms() {
             <p>
               Questions about these terms:{" "}
               <Link to="/contact" className="text-gold-deep font-medium">contact us here</Link>{" "}
-              &middot; LConnectiQ, LLC.
+              &middot; Lymnea Group LLC dba LConnectiQ.
             </p>
           </LegalSection>
         </Reveal>

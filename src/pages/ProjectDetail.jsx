@@ -49,15 +49,16 @@ export default function ProjectDetail() {
 
         {/* Drawing viewer — minimalist so the isometric structure stands out */}
         <Reveal delay={0.1} className="mt-10">
-          <div className="rounded-[3px] overflow-hidden bg-mist-deep border border-navy/5">
+          <div className="relative aspect-[16/9] rounded-[3px] overflow-hidden bg-[#07080d] border border-navy/10 [filter:saturate(1.08)_contrast(1.04)]">
             <Image
               src={project.image}
               alt={`${project.title} — structural BIM model by LConnectiQ`}
               fittingType="fit"
-              className="w-full"
+              quality={97}
+              className="absolute inset-0 w-full h-full"
             />
           </div>
-          <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-ink-soft/70 mt-3">
+          <p className="text-[11px] font-semibold tracking-[0.1em] uppercase text-ink-soft mt-3">
             {project.meta} · Isometric structural rendering
           </p>
         </Reveal>
@@ -124,7 +125,7 @@ export default function ProjectDetail() {
             className="group flex items-center justify-between border-t border-navy/10 pt-7"
           >
             <span>
-              <span className="block text-[11px] font-semibold tracking-[0.1em] uppercase text-ink-soft/70">
+              <span className="block text-[11px] font-semibold tracking-[0.1em] uppercase text-ink-soft">
                 Next project
               </span>
               <span className="text-navy font-bold text-lg group-hover:text-gold-deep transition-colors">

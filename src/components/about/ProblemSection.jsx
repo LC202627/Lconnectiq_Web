@@ -54,7 +54,7 @@ export default function ProblemSection() {
           <span className="text-gold-soft font-bold text-[15px] tracking-[0.04em] whitespace-nowrap">
             Our answer &rarr;
           </span>
-          <p className="text-white/85 text-base max-w-[70ch]">
+          <p className="text-white text-base max-w-[70ch]">
             We become the neutral execution layer that keeps information organized, accountable,
             and audit-ready, without ever taking design authority off your desk.
           </p>

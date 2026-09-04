@@ -48,7 +48,7 @@ export default function SiteHeader() {
               key={l.to}
               to={l.to}
               className={`relative text-sm font-medium py-1 transition-colors duration-300 group ${
-                showSolid ? "text-navy hover:text-gold-deep" : "text-white/90 hover:text-white"
+                showSolid ? "text-navy hover:text-gold-deep" : "text-white hover:text-gold-soft"
               }`}
             >
               {l.label}

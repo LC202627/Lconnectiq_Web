@@ -62,22 +62,22 @@ module.exports = {
   				ring: 'hsl(var(--sidebar-ring))'
   			},
   			navy: {
-  				DEFAULT: '#232538',
-  				deep: '#191a29',
-  				soft: '#343650'
+  				DEFAULT: '#171a2d',
+  				deep: '#0d0e1c',
+  				soft: '#3a3f68'
   			},
   			gold: {
-  				DEFAULT: '#8a7226',
-  				soft: '#a68f4f',
-  				deep: '#524317'
+  				DEFAULT: '#d4af37',
+  				soft: '#f2d98a',
+  				deep: '#6d560f'
   			},
   			mist: {
-  				DEFAULT: '#F5F5F5',
-  				deep: '#e9e9e6'
+  				DEFAULT: '#ffffff',
+  				deep: '#f4f5f8'
   			},
   			ink: {
   				DEFAULT: '#000000',
-  				soft: '#444444'
+  				soft: '#282c38'
   			}
   		},
   		fontFamily: {

@@ -8,10 +8,11 @@ export default function PortfolioCard({ item, delay = 0 }) {
   return (
     <Reveal delay={delay} className="group">
       <Link to={`/portfolio/${item.slug}`} className="block">
-        <div className="aspect-[16/10] rounded-[3px] overflow-hidden relative bg-mist-deep border border-navy/5">
+        <div className="aspect-[16/10] rounded-[3px] overflow-hidden relative bg-[#07080d] border border-navy/10 [filter:saturate(1.08)_contrast(1.04)]">
           <Image
             src={item.image}
             alt={`${item.title} — structural BIM model by LConnectiQ`}
+            quality={95}
             className="w-full h-full transition-transform duration-700 group-hover:scale-105"
           />
           <span className="absolute top-3.5 left-3.5 text-[11px] font-bold tracking-[0.1em] uppercase text-navy bg-gold-soft px-2.5 py-1.5 rounded-sm">

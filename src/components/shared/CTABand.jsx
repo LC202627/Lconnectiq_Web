@@ -10,7 +10,7 @@ export default function CTABand() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "linear-gradient(90deg, rgba(138,114,38,.09) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(90deg, rgba(212,175,55,.16) 1px, transparent 1px)",
           backgroundSize: "80px 100%",
           maskImage: "linear-gradient(90deg, transparent, #000 60%)",
           WebkitMaskImage: "linear-gradient(90deg, transparent, #000 60%)"
@@ -22,14 +22,14 @@ export default function CTABand() {
           <h2 className="text-white font-extrabold leading-tight mt-4 text-5xl">
             Let's keep your next project <span className="text-gold-soft">accountable.</span>
           </h2>
-          <p className="text-white/75 text-lg mt-4 max-w-[46ch]">
+          <p className="text-white text-lg mt-4 max-w-[46ch]">
             Tell us about your project and the support you need. We respond within one business day.
           </p>
         </div>
         <div className="flex flex-col items-start gap-4">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2.5 font-semibold text-[15px] rounded-sm bg-gold-soft text-navy px-7 py-4 transition-all duration-300 hover:bg-white hover:-translate-y-0.5">
+            className="inline-flex items-center gap-2.5 font-semibold text-[15px] rounded-sm bg-gold-soft text-navy px-7 py-4 shadow-[0_8px_30px_-6px_rgba(240,214,126,0.5)] transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_10px_36px_-4px_rgba(255,255,255,0.45)]">
             
             Start a project <ArrowRight size={16} />
           </Link>

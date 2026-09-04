@@ -4,7 +4,7 @@ import { Linkedin, Mail } from "lucide-react";
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-navy-deep text-white/70 pt-14 pb-7">
+    <footer className="bg-navy-deep text-white/95 pt-14 pb-7">
       <div className="max-w-[1240px] mx-auto px-6 md:px-7">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-8 border-b border-white/10">
           <nav className="flex flex-wrap gap-x-7 gap-y-3 md:justify-end">
@@ -18,7 +18,7 @@ export default function SiteFooter() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6">
           <div className="flex flex-col items-center md:items-start gap-1">
             <span className="text-xs">
-              &copy; {new Date().getFullYear()} LConnectiQ, LLC
+              &copy; {new Date().getFullYear()} Lymnea Group LLC dba LConnectiQ
             </span>
           </div>
           <div className="flex gap-3">

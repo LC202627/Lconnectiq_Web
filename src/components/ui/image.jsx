@@ -124,7 +124,7 @@ const Image = React.forwardRef(
       originHeight,
       focalPointX,
       focalPointY,
-      quality = 90,
+      quality = 95,
       onError,
       ...props
     },
