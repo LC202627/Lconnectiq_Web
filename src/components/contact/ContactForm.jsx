@@ -7,15 +7,15 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 const SERVICES = [
   "Construction Document Management",
   "Remote Project Engineering",
-  "Procore Administration",
-  "BIM & CAD Support",
-  "AI Productivity Services",
-  "Workflow Automation",
+  "Procore & Construction Technology",
+  "BIM, CAD & Drafting",
+  "Project Controls & Reporting",
+  "Workflow & Process Improvement",
   "Not sure, need a consultation",
 ];
 
 const inputCls =
-  "w-full bg-white/[0.10] border border-white/[0.24] rounded-sm px-3.5 py-3 text-white placeholder:text-white/70 text-[15px] transition-colors duration-200 focus:outline-none focus:border-gold-soft";
+  "w-full bg-white/[0.10] border border-white/[0.24] rounded-sm px-3.5 py-3 text-white placeholder:text-white/70 text-[15px] transition-colors duration-200 focus:outline-none focus:border-[#9a8200]";
 
 export default function ContactForm() {
   const { toast } = useToast();
@@ -44,7 +44,7 @@ export default function ContactForm() {
     } catch (err) {
       toast({
         title: "Something went wrong",
-        description: "Please email lc@lconnectiq.com directly.",
+        description: "Please email info@lconnectiq.com directly.",
         variant: "destructive",
       });
     } finally {
@@ -55,7 +55,7 @@ export default function ContactForm() {
   if (sent) {
     return (
       <div className="bg-white/[0.05] border border-white/[0.16] rounded-sm p-8 md:p-10 text-center">
-        <div className="w-14 h-14 rounded-full bg-gold-soft text-navy flex items-center justify-center mx-auto">
+        <div className="w-14 h-14 rounded-full bg-[#9a8200] text-navy flex items-center justify-center mx-auto">
           <Check size={28} />
         </div>
         <h3 className="text-white font-bold text-2xl mt-5">Inquiry sent</h3>
@@ -146,7 +146,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="w-full inline-flex items-center justify-center gap-2.5 font-semibold text-[15px] rounded-sm bg-gold-soft text-navy px-7 py-3.5 transition-all duration-300 hover:bg-white disabled:opacity-60"
+        className="w-full inline-flex items-center justify-center gap-2.5 font-semibold text-[15px] rounded-sm bg-[#9a8200] text-navy px-7 py-3.5 transition-all duration-300 hover:bg-white disabled:opacity-60"
       >
         {submitting ? (
           <>

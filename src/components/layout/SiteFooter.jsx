@@ -17,7 +17,8 @@ export default function SiteFooter() {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6">
           <div className="flex flex-col items-center md:items-start gap-1">
-            <span className="text-xs">177 SW Range Ave, Madison, FL 32340</span>
+            <span className="text-xs">Office: 177 SW Range Ave, Madison, FL 32340</span>
+            <span className="text-xs">Mailing: PO Box 5642, Tallahassee, FL 32314</span>
             <span className="text-xs">
               &copy; {new Date().getFullYear()} Lymnea Group LLC dba LConnectiQ
             </span>
@@ -28,14 +29,14 @@ export default function SiteFooter() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className="w-9 h-9 border border-white/15 rounded-sm flex items-center justify-center hover:bg-gold-soft hover:border-gold-soft hover:text-navy transition-all duration-300"
+              className="w-9 h-9 border border-white/15 rounded-sm flex items-center justify-center hover:bg-[#9a8200] hover:border-[#9a8200] hover:text-navy transition-all duration-300"
             >
               <Linkedin size={16} />
             </a>
             <a
-              href="mailto:lc@lconnectiq.com"
+              href="mailto:info@lconnectiq.com"
               aria-label="Email"
-              className="w-9 h-9 border border-white/15 rounded-sm flex items-center justify-center hover:bg-gold-soft hover:border-gold-soft hover:text-navy transition-all duration-300"
+              className="w-9 h-9 border border-white/15 rounded-sm flex items-center justify-center hover:bg-[#9a8200] hover:border-[#9a8200] hover:text-navy transition-all duration-300"
             >
               <Mail size={16} />
             </a>

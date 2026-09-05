@@ -27,10 +27,10 @@ export default function Hero() {
   }, [reduceMotion]);
 
   return (
-    <header className="relative min-h-screen flex items-end overflow-hidden bg-black">
+    <header className="relative min-h-screen flex items-end overflow-hidden bg-[#053242]">
       {/* Background video */}
       {!reduceMotion && (
-        <div className="absolute inset-0 z-0 bg-black">
+        <div className="absolute inset-0 z-0 bg-[#053242]">
           <video
             ref={videoRef}
             autoPlay
@@ -50,7 +50,7 @@ export default function Hero() {
         className="absolute inset-0 z-[1]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(212,175,55,.14) 1px, transparent 1px)",
+            "linear-gradient(rgba(154,130,0,.14) 1px, transparent 1px)",
           backgroundSize: "160px 160px",
           maskImage: "radial-gradient(120% 100% at 70% 30%, #000 30%, transparent 85%)",
           WebkitMaskImage: "radial-gradient(120% 100% at 70% 30%, #000 30%, transparent 85%)",
@@ -83,10 +83,10 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.45, ease: [0.22, 0.61, 0.36, 1] }}
           className="text-white text-[clamp(16px,2.1vw,21px)] max-w-[54ch] mt-6"
         >
-          LConnectiQ is your construction back office: document management, remote project
-          engineering, Procore administration, BIM &amp; CAD support, AI productivity services,
-          and workflow automation, so your projects move faster, cleaner, and with less
-          administrative risk.
+          LConnectiQ is a construction back-office and workflow support company serving the AEC
+          industry. We run construction document management, remote project engineering, Procore
+          and construction technology, BIM/CAD and drafting, project controls, and workflow
+          improvement, so your projects move faster, cleaner, and with less administrative risk.
         </motion.p>
 
         <motion.div
@@ -97,7 +97,7 @@ export default function Hero() {
         >
           <a
             href="#services-teaser"
-            className="inline-flex items-center gap-2.5 font-semibold text-[15px] rounded-sm bg-gold-soft text-navy px-7 py-4 shadow-[0_8px_30px_-6px_rgba(240,214,126,0.55)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_10px_36px_-4px_rgba(255,255,255,0.5)]"
+            className="inline-flex items-center gap-2.5 font-semibold text-[15px] rounded-sm bg-[#9a8200] text-navy px-7 py-4 shadow-[0_8px_30px_-6px_rgba(154,130,0,0.55)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_10px_36px_-4px_rgba(255,255,255,0.5)]"
           >
             Explore services <ArrowRight size={16} />
           </a>

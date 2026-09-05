@@ -49,7 +49,7 @@ export default function ProjectDetail() {
 
         {/* Drawing viewer — minimalist so the isometric structure stands out */}
         <Reveal delay={0.1} className="mt-10">
-          <div className="relative aspect-[16/9] rounded-[3px] overflow-hidden bg-[#07080d] border border-navy/10 [filter:saturate(1.08)_contrast(1.04)]">
+          <div className="relative aspect-[16/9] rounded-[3px] overflow-hidden bg-[#053242] border border-navy/10 [filter:saturate(1.08)_contrast(1.04)]">
             <Image
               src={project.image}
               alt={`${project.title}, structural BIM model by LConnectiQ`}
@@ -85,7 +85,7 @@ export default function ProjectDetail() {
             <ul className="space-y-4">
               {project.highlights.map((h) => (
                 <li key={h} className="flex gap-3 text-ink-soft leading-relaxed">
-                  <span className="mt-2.5 w-5 h-[2px] bg-gold shrink-0" />
+                  <span className="mt-2.5 w-5 h-[2px] bg-[#9a8200] shrink-0" />
                   <span>{h}</span>
                 </li>
               ))}
@@ -111,7 +111,7 @@ export default function ProjectDetail() {
             <ul className="space-y-2.5">
               {project.deliverables.map((d) => (
                 <li key={d} className="flex items-center gap-2.5 text-navy text-[15px] font-medium">
-                  <span className="w-1.5 h-1.5 bg-gold rounded-full" /> {d}
+                  <span className="w-1.5 h-1.5 bg-[#9a8200] rounded-full" /> {d}
                 </li>
               ))}
             </ul>

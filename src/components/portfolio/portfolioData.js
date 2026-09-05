@@ -16,7 +16,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "Tower · podium · utility block",
       Levels: "5 + podium",
     },
-    services: ["BIM & CAD Support", "Construction Document Management", "Remote Project Engineering"],
+    services: ["BIM, CAD & Drafting", "Construction Document Management", "Remote Project Engineering"],
     highlights: [
       "Isometric projection showing interconnected structures and exposed skeletons",
       "Open floor plates and steel truss work documented for clash detection",
@@ -39,7 +39,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "5-story frame · atrium · stair tower",
       Levels: "5",
     },
-    services: ["BIM & CAD Support", "Construction Document Management"],
+    services: ["BIM, CAD & Drafting", "Construction Document Management"],
     highlights: [
       "Hollowed atrium with roof slab removed to expose inner concrete walls",
       "Solid tower section with two arched openings and partial stair visibility",
@@ -62,7 +62,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "3-story block · roof wing · braced projection",
       Levels: "3",
     },
-    services: ["BIM & CAD Support", "Remote Project Engineering", "Procore Administration"],
+    services: ["BIM, CAD & Drafting", "Remote Project Engineering", "Procore & Construction Technology"],
     highlights: [
       "Ribbed metal roof spanning two offset elevations on open steel framing",
       "Diagonal steel struts supporting an overhanging ground-floor slab",
@@ -85,7 +85,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "Steel grid · voided slabs · truss · ramp",
       Levels: "Multi-level",
     },
-    services: ["BIM & CAD Support", "Remote Project Engineering", "Workflow Automation"],
+    services: ["BIM, CAD & Drafting", "Remote Project Engineering", "Workflow & Process Improvement"],
     highlights: [
       "Vertical and horizontal steel grid documented on the upper levels",
       "Circular voids in the floor slab mapped for ventilation / atrium",
@@ -108,7 +108,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "Podium · 3 levels · gabled truss · tower",
       Levels: "3 + tower",
     },
-    services: ["BIM & CAD Support", "Construction Document Management"],
+    services: ["BIM, CAD & Drafting", "Construction Document Management"],
     highlights: [
       "Gabled steel roof truss with parallel rafters and horizontal purlins",
       "Secondary vertical tower extending above the main roofline",
@@ -131,7 +131,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "Shear wall · open floors · core · base",
       Levels: "High-rise",
     },
-    services: ["BIM & CAD Support", "Remote Project Engineering", "Procore Administration"],
+    services: ["BIM, CAD & Drafting", "Remote Project Engineering", "Procore & Construction Technology"],
     highlights: [
       "Tall rectangular concrete shear wall with stacked open floors",
       "Cylindrical central core with curved floor plates and ladder-frame support",
@@ -154,7 +154,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "Tiered platforms · braced frame",
       Levels: "Multi-level",
     },
-    services: ["BIM & CAD Support", "Construction Document Management", "Workflow Automation"],
+    services: ["BIM, CAD & Drafting", "Construction Document Management", "Workflow & Process Improvement"],
     highlights: [
       "Tiered platforms carried by vertical steel columns and angular struts",
       "Ribbed metallic deck surfaces with realistic texture",

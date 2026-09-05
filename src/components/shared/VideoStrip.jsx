@@ -7,7 +7,7 @@ const VIDEO_URL =
 
 export default function VideoStrip({ eyebrow, title, description }) {
   return (
-    <section className="relative bg-black overflow-hidden">
+    <section className="relative bg-[#053242] overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-6 md:px-7 py-20 md:py-24 grid md:grid-cols-2 gap-10 items-center">
         <Reveal>
           <Eyebrow dark>{eyebrow}</Eyebrow>
@@ -17,7 +17,7 @@ export default function VideoStrip({ eyebrow, title, description }) {
           <p className="text-white text-[17px] leading-relaxed">{description}</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <div className="relative aspect-video rounded-sm overflow-hidden border border-white/10 bg-black">
+          <div className="relative aspect-video rounded-sm overflow-hidden border border-white/10 bg-[#053242]">
             <video
               autoPlay
               muted
@@ -29,7 +29,7 @@ export default function VideoStrip({ eyebrow, title, description }) {
               <source src={VIDEO_URL} type="video/mp4" />
             </video>
             {/* Vignette that deepens edges without lifting the blacks */}
-            <div className="absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_50%,transparent_55%,rgba(0,0,0,0.45)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_50%,transparent_55%,rgba(5,50,66,0.45)_100%)]" />
           </div>
         </Reveal>
       </div>

@@ -21,7 +21,7 @@ const WHY = [
   {
     n: "04",
     title: "Technology-enabled",
-    body: "Human-supervised technology and automation built into every service line, productivity gains without giving up professional judgment.",
+    body: "Controlled technology and automation built into every service line, with professional judgment kept in human hands.",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function WhySection() {
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {WHY.map((w, i) => (
-            <Reveal key={w.n} delay={i * 0.06} className="border-t-2 border-gold-deep pt-[18px]">
+            <Reveal key={w.n} delay={i * 0.06} className="border-t-2 border-[#9a8200] pt-[18px]">
               <div className="text-[13px] font-extrabold text-gold-deep tracking-[0.1em]">{w.n}</div>
               <h3 className="text-[19px] text-navy font-bold mt-2.5 mb-2">{w.title}</h3>
               <p className="text-sm text-ink-soft">{w.body}</p>

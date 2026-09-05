@@ -24,10 +24,10 @@ export default function Contact() {
             <div>
               <div className="text-[11px] font-bold tracking-[0.12em] uppercase text-gold-soft">Email</div>
               <a
-                href="mailto:lc@lconnectiq.com"
+                href="mailto:info@lconnectiq.com"
                 className="text-[15px] text-white font-medium mt-1.5 inline-block hover:text-gold-soft transition-colors"
               >
-                lc@lconnectiq.com
+                info@lconnectiq.com
               </a>
             </div>
             <div>
@@ -35,6 +35,13 @@ export default function Contact() {
               <address className="text-[15px] text-white font-medium mt-1.5 not-italic leading-relaxed">
                 177 SW Range Ave<br />
                 Madison, FL 32340
+              </address>
+            </div>
+            <div>
+              <div className="text-[11px] font-bold tracking-[0.12em] uppercase text-gold-soft">Mailing</div>
+              <address className="text-[15px] text-white font-medium mt-1.5 not-italic leading-relaxed">
+                PO Box 5642<br />
+                Tallahassee, FL 32314
               </address>
             </div>
           </div>

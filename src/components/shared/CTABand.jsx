@@ -20,7 +20,7 @@ export default function CTABand() {
         <div className="flex flex-col items-start gap-4">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2.5 font-semibold text-[15px] rounded-sm bg-gold-soft text-navy px-7 py-4 shadow-[0_8px_30px_-6px_rgba(240,214,126,0.5)] transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_10px_36px_-4px_rgba(255,255,255,0.45)]">
+            className="inline-flex items-center gap-2.5 font-semibold text-[15px] rounded-sm bg-[#9a8200] text-navy px-7 py-4 shadow-[0_8px_30px_-6px_rgba(154,130,0,0.5)] transition-all duration-300 hover:bg-white hover:-translate-y-0.5 hover:shadow-[0_10px_36px_-4px_rgba(255,255,255,0.45)]">
             
             Start a project <ArrowRight size={16} />
           </Link>

@@ -10,7 +10,7 @@ function ScoreBar({ score }) {
         {[1, 2, 3, 4, 5].map((n) => (
           <span
             key={n}
-            className={`w-4 h-1.5 rounded-[1px] ${n <= Math.round(score) ? "bg-gold-deep" : "bg-navy/15"}`}
+            className={`w-4 h-1.5 rounded-[1px] ${n <= Math.round(score) ? "bg-[#9a8200]" : "bg-navy/15"}`}
           />
         ))}
       </div>

@@ -28,7 +28,7 @@ export default function IntroSplash() {
   }, [progress]);
 
   // One progress value drives background AND logo color change — perfectly in sync
-  const backgroundColor = useTransform(progress, [0, 1], ["#000000", "#ffffff"]);
+  const backgroundColor = useTransform(progress, [0, 1], ["#053242", "#ffffff"]);
   const lightLogoOpacity = useTransform(progress, [0, 1], [1, 0]);
   const darkLogoOpacity = useTransform(progress, [0, 1], [0, 1]);
 
@@ -54,17 +54,17 @@ export default function IntroSplash() {
               animate={{ scale: [1, 1.14, 1] }}
               transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
             >
-              <div className="w-full h-full rounded-full bg-[radial-gradient(circle,rgba(255,236,180,0.7)_0%,rgba(240,214,126,0.35)_40%,transparent_72%)]" />
+              <div className="w-full h-full rounded-full bg-[radial-gradient(circle,rgba(154,130,0,0.7)_0%,rgba(154,130,0,0.35)_40%,transparent_72%)]" />
             </motion.div>
 
             <motion.div
               style={{ opacity: lightLogoOpacity }}
-              className="relative [filter:brightness(1.25)_drop-shadow(0_0_22px_rgba(255,240,200,0.9))_drop-shadow(0_0_54px_rgba(240,214,126,0.6))]"
+              className="relative [filter:brightness(1.25)_drop-shadow(0_0_22px_rgba(154,130,0,0.9))_drop-shadow(0_0_54px_rgba(154,130,0,0.6))]"
             >
               <Logo className="h-20 w-[320px]" inverted />
             </motion.div>
             <motion.div
-              className="absolute inset-0 [filter:drop-shadow(0_0_20px_rgba(212,175,55,0.4))]"
+              className="absolute inset-0 [filter:drop-shadow(0_0_20px_rgba(154,130,0,0.4))]"
               style={{ opacity: darkLogoOpacity }}
             >
               <Logo className="h-20 w-[320px]" />

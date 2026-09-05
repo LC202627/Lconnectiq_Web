@@ -52,11 +52,7 @@ export default function SiteHeader() {
               }`}
             >
               {l.label}
-              <span
-                className={`absolute left-0 -bottom-0.5 h-[2px] w-0 group-hover:w-full transition-all duration-300 ${
-                  showSolid ? "bg-gold-deep" : "bg-gold-soft"
-                }`}
-              />
+              <span className="absolute left-0 -bottom-0.5 h-[2px] w-0 group-hover:w-full transition-all duration-300 bg-[#9a8200]" />
             </Link>
           ))}
           <Link
@@ -64,7 +60,7 @@ export default function SiteHeader() {
             className={`inline-flex items-center gap-2 text-sm font-semibold rounded-sm border px-5 py-2.5 transition-all duration-300 ${
               showSolid
                 ? "border-navy/15 text-navy hover:bg-navy hover:text-white hover:border-navy"
-                : "border-white/40 text-white hover:bg-gold-soft hover:border-gold-soft hover:text-navy"
+                : "border-white/40 text-white hover:bg-[#9a8200] hover:border-[#9a8200] hover:text-navy"
             }`}
           >
             Start a project

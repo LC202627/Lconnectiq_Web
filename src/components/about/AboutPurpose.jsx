@@ -25,8 +25,8 @@ export default function AboutPurpose() {
             LConnectiQ was founded on a clear observation: the construction industry has a
             sophisticated design and engineering community, and powerful software platforms, but a
             persistent gap in the people and processes that keep information organized,
-            accountable, and audit-ready. We exist to fill that gap with construction support
-            services.
+            accountable, and audit-ready. LConnectiQ is a construction back-office and workflow
+            support company serving the AEC industry, and we exist to fill that gap.
           </p>
           <p className="text-ink-soft text-[17px] leading-relaxed mb-5">
             We don't design and we don't manage construction, we execute and structure, so
@@ -44,7 +44,7 @@ export default function AboutPurpose() {
               {SERVING.map((s) => (
                 <span
                   key={s}
-                  className="text-sm font-medium text-navy bg-white border border-navy/10 px-4 py-2.5 rounded-sm transition-colors duration-200 hover:border-gold-deep hover:text-gold-deep"
+                  className="text-sm font-medium text-navy bg-white border border-navy/10 px-4 py-2.5 rounded-sm transition-colors duration-200 hover:border-[#9a8200] hover:text-gold-deep"
                 >
                   {s}
                 </span>

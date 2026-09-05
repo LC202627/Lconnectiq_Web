@@ -7,9 +7,7 @@ export default function Eyebrow({ children, dark = false }) {
         dark ? "text-gold-soft" : "text-gold-deep"
       }`}
     >
-      <span
-        className={`w-6 h-[2px] inline-block ${dark ? "bg-gold-soft" : "bg-gold"}`}
-      />
+      <span className="w-6 h-[2px] inline-block bg-[#9a8200]" />
       {children}
     </span>
   );

@@ -10,7 +10,7 @@ export default function Services() {
       <PageHeader
         eyebrow="What we deliver"
         title="Services"
-        subtitle="Six service lines coordinated so nothing falls between the office, the trades, and the field."
+        subtitle="Construction Document Management | Remote Project Engineering | Procore & Construction Technology | BIM, CAD & Drafting | Project Controls & Reporting | Workflow & Process Improvement"
       />
       <section className="py-20 md:py-24 bg-white">
         <div className="max-w-[1240px] mx-auto px-6 md:px-7">

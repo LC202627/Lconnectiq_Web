@@ -28,7 +28,7 @@ export default function AnimatedStat({ value, suffix = "", label }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="border-l-2 border-gold pl-5"
+      className="border-l-2 border-[#9a8200] pl-5"
     >
       <div className="text-navy text-[clamp(38px,5vw,60px)] font-extrabold leading-none tracking-tight tabular-nums">
         {display}

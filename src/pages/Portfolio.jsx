@@ -35,7 +35,7 @@ export default function Portfolio() {
                   className={`text-sm font-medium px-4 py-2 rounded-sm border transition-colors duration-200 ${
                     filter === c
                       ? "bg-navy text-white border-navy"
-                      : "bg-white text-navy border-navy/10 hover:border-gold-deep hover:text-gold-deep"
+                      : "bg-white text-navy border-navy/10 hover:border-[#9a8200] hover:text-gold-deep"
                   }`}
                 >
                   {c}

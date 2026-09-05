@@ -104,8 +104,14 @@ export default function Terms() {
           <LegalSection heading="13. Contact">
             <p>
               Questions about these terms:{" "}
-              <Link to="/contact" className="text-gold-deep font-medium">contact us here</Link>{" "}
-              &middot; Lymnea Group LLC dba LConnectiQ &middot; 177 SW Range Ave, Madison, FL 32340.
+              <Link to="/contact" className="text-gold-deep font-medium">contact us here</Link>.
+            </p>
+            <p className="mt-3">
+              Lymnea Group LLC dba LConnectiQ<br />
+              Office: 177 SW Range Ave, Madison, FL 32340<br />
+              Mailing: PO Box 5642, Tallahassee, FL 32314<br />
+              Email:{" "}
+              <a href="mailto:info@lconnectiq.com" className="text-gold-deep font-medium">info@lconnectiq.com</a>
             </p>
           </LegalSection>
         </Reveal>
