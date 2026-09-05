@@ -38,6 +38,26 @@ export default function ContactForm() {
     setSubmitting(true);
     try {
       await base44.entities.ContactInquiry.create(form);
+
+      // Notify the team. The inquiry is already recorded above, so a failure
+      // here should not surface as a submission error.
+      try {
+        await base44.integrations.Core.SendEmail({
+          to: "lc@lconnectiq.com",
+          subject: `New project inquiry: ${form.first_name} ${form.last_name}`,
+          body: [
+            `Name: ${form.first_name} ${form.last_name}`,
+            `Company: ${form.company || "Not provided"}`,
+            `Email: ${form.email}`,
+            `Service: ${form.service || "Not specified"}`,
+            "",
+            form.message,
+          ].join("\n"),
+        });
+      } catch (mailErr) {
+        console.error("Inquiry notification email failed", mailErr);
+      }
+
       setSent(true);
       setForm({ first_name: "", last_name: "", company: "", email: "", service: "", message: "" });
       toast({ title: "Inquiry sent", description: "We'll respond within one business day." });
