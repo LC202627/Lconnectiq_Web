@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { base44 } from "@/api/base44Client";
 import { useToast } from "@/components/ui/use-toast";
 import { Loader2, Send, Check } from "lucide-react";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
@@ -28,6 +27,7 @@ export default function ContactForm() {
     email: "",
     service: "",
     message: "",
+    company_url: "", // honeypot — must stay empty
   });
 
   const update = (field) => (e) => setForm((f) => ({ ...f, [field]: e.target.value }));
@@ -37,29 +37,23 @@ export default function ContactForm() {
     if (!form.first_name || !form.last_name || !form.email || !form.message) return;
     setSubmitting(true);
     try {
-      await base44.entities.ContactInquiry.create(form);
-
-      // Notify the team. The inquiry is already recorded above, so a failure
-      // here should not surface as a submission error.
-      try {
-        await base44.integrations.Core.SendEmail({
-          to: "lc@lconnectiq.com",
-          subject: `New project inquiry: ${form.first_name} ${form.last_name}`,
-          body: [
-            `Name: ${form.first_name} ${form.last_name}`,
-            `Company: ${form.company || "Not provided"}`,
-            `Email: ${form.email}`,
-            `Service: ${form.service || "Not specified"}`,
-            "",
-            form.message,
-          ].join("\n"),
-        });
-      } catch (mailErr) {
-        console.error("Inquiry notification email failed", mailErr);
-      }
+      const res = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error(`Inquiry failed (${res.status})`);
 
       setSent(true);
-      setForm({ first_name: "", last_name: "", company: "", email: "", service: "", message: "" });
+      setForm({
+        first_name: "",
+        last_name: "",
+        company: "",
+        email: "",
+        service: "",
+        message: "",
+        company_url: "",
+      });
       toast({ title: "Inquiry sent", description: "We'll respond within one business day." });
     } catch (err) {
       toast({
@@ -95,6 +89,17 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white/[0.05] border border-white/[0.16] rounded-sm p-8 md:p-9">
+      {/* Honeypot: hidden from users, catches bots */}
+      <input
+        type="text"
+        name="company_url"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        value={form.company_url}
+        onChange={update("company_url")}
+        className="absolute left-[-9999px] h-0 w-0 opacity-0"
+      />
       <div className="grid grid-cols-2 gap-3.5 mb-4">
         <div>
           <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/90 mb-1.5">

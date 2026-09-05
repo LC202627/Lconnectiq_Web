@@ -1,0 +1,7 @@
+# Copy to .dev.vars for local `npm run dev:cf` (Cloudflare Pages Functions).
+# In production these are set in Cloudflare Pages > Settings > Variables and Secrets.
+
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxx
+INQUIRY_FROM=LConnectiQ <inquiries@lconnectiq.com>
+# Optional, defaults to lc@lconnectiq.com
+INQUIRY_TO=lc@lconnectiq.com

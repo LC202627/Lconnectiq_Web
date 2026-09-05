@@ -29,4 +29,6 @@ dist-ssr
 
 .env
 .vite
+.dev.vars
+.wrangler
 base44/.app.jsonc
