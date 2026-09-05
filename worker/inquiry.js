@@ -1,14 +1,11 @@
 /**
- * Cloudflare Pages Function: POST /api/inquiry
+ * Contact form handler: receives the inquiry and emails it via Resend.
  *
- * Receives the contact form and emails it via Resend.
- *
- * Required environment variables (Cloudflare Pages > Settings > Variables,
- * and .dev.vars for local `wrangler pages dev`):
+ * Environment variables (Cloudflare dashboard > Settings > Variables,
+ * or .dev.vars for local `wrangler dev`):
  *   RESEND_API_KEY   Resend API key (secret)
  *   INQUIRY_FROM     verified sender, e.g. "LConnectiQ <inquiries@lconnectiq.com>"
- * Optional:
- *   INQUIRY_TO       recipient (defaults to lc@lconnectiq.com)
+ *   INQUIRY_TO       recipient (optional, defaults to lc@lconnectiq.com)
  */
 
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
@@ -20,9 +17,7 @@ function json(body, status = 200) {
   });
 }
 
-export async function onRequestPost(context) {
-  const { request, env } = context;
-
+export async function handleInquiry(request, env) {
   let data;
   try {
     data = await request.json();
