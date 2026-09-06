@@ -7,5 +7,9 @@
     "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application"
+  },
+  "vars": {
+    "INQUIRY_FROM": "LConnectiQ <inquiries@lconnectiq.com>",
+    "INQUIRY_TO": "lc@lconnectiq.com"
   }
 }
