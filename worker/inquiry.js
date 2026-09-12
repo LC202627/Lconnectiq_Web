@@ -86,16 +86,7 @@ export async function handleInquiry(request, env) {
   if (!res.ok) {
     const detail = await res.text().catch(() => "");
     console.error("inquiry: Resend responded", res.status, detail);
-    let resendMessage = detail;
-    try {
-      resendMessage = JSON.parse(detail).message || detail;
-    } catch {
-      // keep raw text
-    }
-    return json(
-      { error: "Could not send the inquiry", resend_status: res.status, resend_message: resendMessage },
-      502,
-    );
+    return json({ error: "Could not send the inquiry" }, 502);
   }
 
   return json({ ok: true });
