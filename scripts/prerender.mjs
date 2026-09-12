@@ -6,7 +6,7 @@
 //
 // Run via `npm run build:prerender` (chains: client build -> ssr build -> this script).
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import path from "node:path";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -14,7 +14,7 @@ const SITE_URL = "https://lconnectiq.com";
 
 async function main() {
   const { ROUTES, render } = await import(
-    path.join(ROOT, "dist-server", "entry-server.js")
+    pathToFileURL(path.join(ROOT, "dist-server", "entry-server.js")).href
   );
 
   const shell = await readFile(path.join(ROOT, "dist", "index.html"), "utf8");
@@ -39,11 +39,11 @@ async function main() {
             slogan: "Leadership. Intelligence. Connection.",
             makesOffer: [
               "Construction Document Management",
-              "Remote Project Engineering",
-              "Procore Administration",
-              "BIM & CAD Support",
-              "AI Productivity Services",
-              "Workflow Automation",
+              "Remote Project Engineering & Project Coordination Support",
+              "Procore Administration & Construction Technology Support",
+              "BIM, CAD & Drafting Support",
+              "Project Controls, Reporting & Data Management",
+              "Workflow & Process Improvement",
             ].map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
           })}</script>`
         : "";

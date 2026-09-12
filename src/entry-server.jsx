@@ -19,9 +19,9 @@ import SiteLayout from "@/components/layout/SiteLayout";
 export const ROUTES = {
   "/": {
     Component: Home,
-    title: "LConnectiQ | AI-Enabled Construction Support Services",
+    title: "LConnectiQ | Construction Back-Office & Workflow Support",
     description:
-      "LConnectiQ is a construction back-office and workflow support company serving the AEC industry: document management, remote project engineering, Procore administration, BIM & CAD support, AI productivity services, and workflow automation.",
+      "LConnectiQ is a construction back-office and workflow support company serving the AEC industry: construction document management, remote project engineering, Procore and construction technology, BIM, CAD and drafting, project controls and reporting, and workflow and process improvement.",
   },
   "/services": {
     Component: Services,
