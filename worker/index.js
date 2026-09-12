@@ -105,14 +105,18 @@ export default {
       const snapshot = await env.ASSETS.fetch(new Request(snapshotUrl.href, { method: "GET" }));
       console.log("bot-prerender", { pathname: url.pathname, ua, snapshotStatus: snapshot.status });
       if (snapshot.ok) {
-        return withSecurityHeaders(
+        const res = withSecurityHeaders(
           new Response(snapshot.body, {
             status: 200,
             headers: { "content-type": "text/html; charset=utf-8" },
           })
         );
+        res.headers.set("X-Debug-Snapshot", `hit:${snapshot.status}`);
+        return res;
       }
-      // Fall through to the normal SPA if the snapshot is ever missing.
+      const res = withSecurityHeaders(await env.ASSETS.fetch(request));
+      res.headers.set("X-Debug-Snapshot", `miss:${snapshot.status}:${slug}`);
+      return res;
     }
 
     return withSecurityHeaders(await env.ASSETS.fetch(request));
