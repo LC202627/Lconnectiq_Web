@@ -23,7 +23,7 @@ import { handleInquiry } from "./inquiry.js";
  */
 
 // Routes that have a prerendered snapshot, and the slug used for its file
-// name under dist/_prerendered/ (must match scripts/prerender.mjs).
+// name under dist/bot-snapshots/ (must match scripts/prerender.mjs).
 const PRERENDERED_ROUTES = {
   "/": "home",
   "/services": "services",
@@ -78,7 +78,6 @@ function withSecurityHeaders(response) {
   for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
     res.headers.set(key, value);
   }
-  res.headers.set("X-Deploy-Marker", "diag-8483d89-plus1");
   return res;
 }
 
@@ -101,22 +100,22 @@ export default {
       // Range headers from the original request can make the ASSETS binding
       // return a non-200 (e.g. 304/206) for what must always be a full,
       // fresh snapshot body.
-      const snapshotUrl = new URL(`/_prerendered/${slug}.html`, url);
+      const snapshotUrl = new URL(`/bot-snapshots/${slug}.html`, url);
       const snapshot = await env.ASSETS.fetch(new Request(snapshotUrl.href, { method: "GET" }));
-      console.log("bot-prerender", { pathname: url.pathname, ua, snapshotStatus: snapshot.status });
       if (snapshot.ok) {
-        const res = withSecurityHeaders(
+        return withSecurityHeaders(
           new Response(snapshot.body, {
             status: 200,
             headers: { "content-type": "text/html; charset=utf-8" },
           })
         );
-        res.headers.set("X-Debug-Snapshot", `hit:${snapshot.status}`);
-        return res;
       }
-      const res = withSecurityHeaders(await env.ASSETS.fetch(request));
-      res.headers.set("X-Debug-Snapshot", `miss:${snapshot.status}:${slug}`);
-      return res;
+      console.error("bot-prerender: snapshot fetch failed", {
+        pathname: url.pathname,
+        slug,
+        status: snapshot.status,
+      });
+      // Fall through to the normal SPA if the snapshot is ever missing.
     }
 
     return withSecurityHeaders(await env.ASSETS.fetch(request));

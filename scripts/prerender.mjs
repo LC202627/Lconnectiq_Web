@@ -18,7 +18,7 @@ async function main() {
   );
 
   const shell = await readFile(path.join(ROOT, "dist", "index.html"), "utf8");
-  const outDir = path.join(ROOT, "dist", "_prerendered");
+  const outDir = path.join(ROOT, "dist", "bot-snapshots");
   await mkdir(outDir, { recursive: true });
 
   const slugFor = (route) => (route === "/" ? "home" : route.replace(/^\//, "").replace(/\//g, "-"));
@@ -71,7 +71,7 @@ async function main() {
 
     const slug = slugFor(route);
     await writeFile(path.join(outDir, `${slug}.html`), page, "utf8");
-    console.log(`Prerendered ${route} -> _prerendered/${slug}.html (${page.length} bytes)`);
+    console.log(`Prerendered ${route} -> bot-snapshots/${slug}.html (${page.length} bytes)`);
   }
 }
 
