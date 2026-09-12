@@ -78,6 +78,7 @@ function withSecurityHeaders(response) {
   for (const [key, value] of Object.entries(SECURITY_HEADERS)) {
     res.headers.set(key, value);
   }
+  res.headers.set("X-Deploy-Marker", "diag-8483d89-plus1");
   return res;
 }
 
