@@ -95,9 +95,14 @@ export default {
     const ua = request.headers.get("user-agent") || "";
     const slug = PRERENDERED_ROUTES[url.pathname];
     if (slug && BOT_UA_RE.test(ua)) {
+      // A clean, header-free GET — deliberately not cloning the inbound
+      // request, so no conditional (If-None-Match / If-Modified-Since) or
+      // Range headers from the original request can make the ASSETS binding
+      // return a non-200 (e.g. 304/206) for what must always be a full,
+      // fresh snapshot body.
       const snapshotUrl = new URL(`/_prerendered/${slug}.html`, url);
-      const snapshotReq = new Request(snapshotUrl, request);
-      const snapshot = await env.ASSETS.fetch(snapshotReq);
+      const snapshot = await env.ASSETS.fetch(new Request(snapshotUrl.href, { method: "GET" }));
+      console.log("bot-prerender", { pathname: url.pathname, ua, snapshotStatus: snapshot.status });
       if (snapshot.ok) {
         return withSecurityHeaders(
           new Response(snapshot.body, {
