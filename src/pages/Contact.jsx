@@ -30,6 +30,15 @@ export default function Contact() {
               </a>
             </div>
             <div>
+              <div className="text-[11px] font-bold tracking-[0.12em] uppercase text-gold-soft">Phone</div>
+              <a
+                href="tel:+18507211804"
+                className="text-[15px] text-white font-medium mt-1.5 inline-block hover:text-gold-soft transition-colors"
+              >
+                (850) 721-1804
+              </a>
+            </div>
+            <div>
               <div className="text-[11px] font-bold tracking-[0.12em] uppercase text-gold-soft">Office</div>
               <address className="text-[15px] text-white font-medium mt-1.5 not-italic leading-relaxed">
                 177 SW Range Ave<br />
