@@ -6,7 +6,7 @@ export const PORTFOLIO_ITEMS = [
     slug: "administrative-building",
     category: "Commercial",
     meta: "Structural BIM Model",
-    image: `${BASE}dc47b438a_AdministrativeBuilding.png`,
+    image: "/portfolio/administrative-building.webp",
     location: "Tallahassee, FL",
     summary:
       "Isometric structural model of a multi-part administrative complex with a vertical tower, wide podium, and a box-like utility block, documenting the exposed concrete and steel framing for coordination review.",
@@ -29,7 +29,7 @@ export const PORTFOLIO_ITEMS = [
     slug: "concrete-parking-structure",
     category: "Institutional",
     meta: "Structural BIM Model",
-    image: `${BASE}0d6ae117c_Concreteparkingstructure.png`,
+    image: "/portfolio/concrete-parking-structure.webp",
     location: "North Florida",
     summary:
       "Tiered, L-shaped concrete and steel frame with a five-story skeletal grid, an atrium cutout exposing inner walls, and a solid tower core with arched openings revealing an interior stair.",
@@ -52,7 +52,7 @@ export const PORTFOLIO_ITEMS = [
     slug: "institutional-facility",
     category: "Institutional",
     meta: "Structural BIM Model",
-    image: `${BASE}9dad0057f_InstitutionalFacility.png`,
+    image: "/portfolio/institutional-facility.webp",
     location: "Florida Panhandle",
     summary:
       "Modernist L-shaped facility with a three-story block, a ribbed metal-roof wing on offset elevations, and a ground-level projection carried by diagonal steel braces over a courtyard stair.",
@@ -75,7 +75,7 @@ export const PORTFOLIO_ITEMS = [
     slug: "mixed-use-development",
     category: "Mixed-Use",
     meta: "Structural BIM Model",
-    image: `${BASE}ab7633cc4_Mixed-UseDevelopment.png`,
+    image: "/portfolio/mixed-use-development.webp",
     location: "Tallahassee, FL",
     summary:
       "Complex multi-level frame under construction, combining cast-in-place slabs, a prominent steel grid, circular floor voids for ventilation, and a golden-hued triangular truss section tied to a circular pad by a bridge.",
@@ -98,7 +98,7 @@ export const PORTFOLIO_ITEMS = [
     slug: "multi-story-residential",
     category: "Residential",
     meta: "Structural BIM Model",
-    image: `${BASE}5983c7652_Multi-StoryResidential.png`,
+    image: "/portfolio/multi-story-residential.webp",
     location: "Florida",
     summary:
       "Structural skeleton of a multi-story residence on a rectangular concrete podium, with three floor slabs, a gabled steel roof truss, and a secondary vertical tower rising above the main roofline.",
