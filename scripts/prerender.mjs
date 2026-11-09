@@ -31,8 +31,19 @@ async function main() {
       route === "/"
         ? `<script type="application/ld+json">${JSON.stringify({
             "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": `${SITE_URL}/#website`,
+                name: "LConnectiQ",
+                alternateName: ["LConnectiQ Construction Support"],
+                url: `${SITE_URL}/`,
+              },
+              {
             "@type": "ProfessionalService",
+            "@id": `${SITE_URL}/#organization`,
             name: "LConnectiQ",
+            legalName: "Lymnea Group LLC",
             url: SITE_URL,
             description,
             telephone: "+1-850-721-1804",
@@ -46,6 +57,8 @@ async function main() {
               "Project Controls, Reporting & Data Management",
               "Workflow & Process Improvement",
             ].map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
+              },
+            ],
           })}</script>`
         : "";
 
