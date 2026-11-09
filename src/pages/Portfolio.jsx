@@ -18,13 +18,13 @@ export default function Portfolio() {
       <PageHeader
         eyebrow="LConnectiQ · portfolio"
         title="Portfolio"
-        subtitle="Portfolio samples are published only after source, ownership or publication rights, sanitization, factual accuracy, and release authorization are verified."
+        subtitle="Selected sample work across BIM, CAD, construction documentation and project engineering support."
       />
       <section className="py-20 md:py-24 bg-white">
         <div className="max-w-[1240px] mx-auto px-6 md:px-7">
           <Reveal className="flex flex-col md:flex-row md:items-center justify-between gap-5 mb-10">
             <p className="text-ink-soft text-base max-w-[62ch]">
-              Only controlled and authorized portfolio material is displayed here. Materials still under internal review are not published as project experience or client work.
+              A selection of sample models and documentation that show how we work. Samples are illustrative and are not presented as client engagements.
             </p>
             {PORTFOLIO_ITEMS.length > 0 && (
               <div className="flex flex-wrap gap-2.5">
@@ -54,7 +54,7 @@ export default function Portfolio() {
             </div>
           ) : (
             <p className="text-center text-ink-soft py-12">
-              No approved portfolio samples are currently published.
+              New portfolio samples are coming soon.
             </p>
           )}
         </div>
