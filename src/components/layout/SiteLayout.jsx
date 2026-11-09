@@ -3,14 +3,13 @@ import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
-import BottomTabBar from "@/components/layout/BottomTabBar";
 import IntroSplash from "@/components/layout/IntroSplash";
 import RouteMeta from "@/components/layout/RouteMeta";
 
 export default function SiteLayout() {
   const location = useLocation();
   return (
-    <div className="min-h-screen flex flex-col pb-[calc(68px+env(safe-area-inset-bottom))] md:pb-0">
+    <div className="min-h-screen flex flex-col">
       <RouteMeta />
       <IntroSplash />
       <SiteHeader />
@@ -27,7 +26,6 @@ export default function SiteLayout() {
         </AnimatePresence>
       </main>
       <SiteFooter />
-      <BottomTabBar />
     </div>
   );
 }
