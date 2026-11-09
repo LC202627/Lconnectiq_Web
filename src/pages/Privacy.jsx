@@ -7,7 +7,7 @@ import Reveal from "@/components/shared/Reveal";
 export default function Privacy() {
   return (
     <div>
-      <PageHeader eyebrow="Legal" title="Privacy Policy" subtitle="Effective date: July 7, 2026" />
+      <PageHeader eyebrow="Legal" title="Privacy Policy" subtitle="Effective date: November 9, 2026" />
       <section className="py-16 md:py-20 bg-white">
         <Reveal className="max-w-[860px] mx-auto px-6">
           <LegalSection heading="1. Who we are">
@@ -29,9 +29,11 @@ export default function Privacy() {
               </li>
               <li>
                 <strong>Technical information.</strong> Like most websites, our hosting provider
-                automatically logs basic technical data such as IP address, browser type, and pages
-                visited. If analytics tools are enabled, they may collect usage data and an approximate
-                location.
+                may automatically collect basic technical data such as IP address, browser type, and
+                pages visited. Our contact form also uses Cloudflare Turnstile, a security check that
+                processes technical signals from your browser, such as your IP address and browser
+                details, to tell people apart from automated bots. If analytics tools are enabled,
+                they may collect usage data and an approximate location.
               </li>
             </ul>
           </LegalSection>
@@ -53,8 +55,8 @@ export default function Privacy() {
           <LegalSection heading="5. Sharing">
             <p>
               We share information only with service providers that help us operate (such as our
-              email and productivity platform, our website hosting provider, and our form-processing
-              service), and only so they can perform those functions. We may also disclose
+              email and productivity platform, our website hosting provider, our form-processing
+              service, and our spam-prevention service), and only so they can perform those functions. We may also disclose
               information if required by law, or as part of a business transaction such as a merger
               or sale, in which case this policy would continue to apply to your information.
             </p>
@@ -71,9 +73,11 @@ export default function Privacy() {
 
           <LegalSection heading="7. Cookies and analytics">
             <p>
-              This site currently sets no marketing cookies. If we enable analytics, small cookies
-              may be used to measure site usage. You can block or delete cookies in your browser
-              settings at any time without losing access to this site.
+              This site currently sets no marketing cookies. The spam check on our contact form may use
+              cookies or similar browser storage solely to verify that you are a person. If we enable
+              analytics, small cookies may be used to measure site usage. You can block or delete
+              cookies in your browser settings at any time without losing access to this site, though
+              blocking them may prevent the contact form&apos;s spam check from working.
             </p>
           </LegalSection>
 
