@@ -20,7 +20,7 @@ export const ROUTE_META = {
   "/portfolio": {
     title: "Portfolio | LConnectiQ",
     description:
-      "Verified, authorized portfolio samples from LConnectiQ's construction document management and project engineering support work.",
+      "Selected sample work from LConnectiQ across BIM, CAD, construction document management and project engineering support.",
   },
   "/about": {
     title: "About LConnectiQ | Construction Back-Office Support",
