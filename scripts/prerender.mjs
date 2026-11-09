@@ -35,6 +35,7 @@ async function main() {
             name: "LConnectiQ",
             url: SITE_URL,
             description,
+            telephone: "+1-850-721-1804",
             areaServed: "US-FL",
             slogan: "Leadership. Intelligence. Connection.",
             makesOffer: [

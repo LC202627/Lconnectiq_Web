@@ -24,6 +24,12 @@ export default function SiteFooter() {
             <span className="text-xs">Office: 177 SW Range Ave, Madison, FL 32340</span>
             <span className="text-xs">Mailing: PO Box 5642, Tallahassee, FL 32314</span>
             <span className="text-xs">
+              Phone:{" "}
+              <a href="tel:+18507211804" className="hover:text-gold-soft transition-colors">
+                (850) 721-1804
+              </a>
+            </span>
+            <span className="text-xs">
               &copy; {new Date().getFullYear()} Lymnea Group LLC dba LConnectiQ
             </span>
           </div>
