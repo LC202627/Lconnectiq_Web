@@ -5,7 +5,7 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 
 const SERVICES = [
   "Construction Document Management",
-  "Remote Project Engineering",
+  "Remote Project Coordination Support",
   "Procore & Construction Technology",
   "BIM, CAD & Drafting",
   "Project Controls & Reporting",

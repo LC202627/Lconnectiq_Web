@@ -16,7 +16,7 @@ export default function ServicesTeaser() {
             Six service lines, one standard.
           </h2>
           <p className="text-ink-soft text-lg">
-            Construction Document Management | Remote Project Engineering | Procore &amp; Construction
+            Construction Document Management | Remote Project Coordination Support | Procore &amp; Construction
             Technology | BIM, CAD &amp; Drafting | Project Controls &amp; Reporting | Workflow &amp;
             Process Improvement
           </p>

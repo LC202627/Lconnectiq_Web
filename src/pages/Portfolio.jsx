@@ -18,7 +18,7 @@ export default function Portfolio() {
       <PageHeader
         eyebrow="LConnectiQ · portfolio"
         title="Portfolio"
-        subtitle="Examples of BIM, CAD, construction documentation, and project engineering support."
+        subtitle="Examples of BIM, CAD, construction documentation, and project coordination support."
       />
       <section className="py-20 md:py-24 bg-white">
         <div className="max-w-[1240px] mx-auto px-6 md:px-7">

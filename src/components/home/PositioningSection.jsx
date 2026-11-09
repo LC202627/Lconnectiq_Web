@@ -11,7 +11,7 @@ export default function PositioningSection() {
         <Reveal>
           <Eyebrow>Who we are</Eyebrow>
           <h2 className="text-navy font-extrabold tracking-tight text-[clamp(26px,3.4vw,40px)] leading-tight mt-4">
-            The neutral execution layer your project team is missing.
+            Construction document control and project coordination support for AEC teams.
           </h2>
           <Link
             to="/about"

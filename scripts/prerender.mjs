@@ -39,7 +39,7 @@ async function main() {
             slogan: "Leadership. Intelligence. Connection.",
             makesOffer: [
               "Construction Document Management",
-              "Remote Project Engineering & Project Coordination Support",
+              "Remote Project Coordination Support",
               "Procore Administration & Construction Technology Support",
               "BIM, CAD & Drafting Support",
               "Project Controls, Reporting & Data Management",

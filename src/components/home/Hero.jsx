@@ -84,7 +84,7 @@ export default function Hero() {
           className="text-white text-[clamp(16px,2.1vw,21px)] max-w-[54ch] mt-6"
         >
           LConnectiQ is a construction back-office and workflow support company serving the AEC
-          industry. We run construction document management, remote project engineering, Procore
+          industry. We run construction document management, remote project coordination support, Procore
           and construction technology, BIM/CAD and drafting, project controls, and workflow
           improvement, so your projects move faster, cleaner, and with less administrative risk.
         </motion.p>
