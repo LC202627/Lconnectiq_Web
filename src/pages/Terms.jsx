@@ -49,8 +49,8 @@ export default function Terms() {
 
           <LegalSection heading="5. Portfolio materials">
             <p>
-              Portfolio images and models illustrate the type and quality of work we perform. They
-              are representative of capability and may not depict a specific client engagement.
+              Portfolio images and models are illustrative samples of LConnectiQ&apos;s capabilities and
+              are not presented as client engagements unless expressly identified.
             </p>
           </LegalSection>
 

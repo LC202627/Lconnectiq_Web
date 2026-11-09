@@ -30,7 +30,7 @@ export default function Privacy() {
               <li>
                 <strong>Technical information.</strong> Like most websites, our hosting provider
                 automatically logs basic technical data such as IP address, browser type, and pages
-                visited. If we enable analytics, it may collect similar usage data and approximate
+                visited. If analytics tools are enabled, they may collect usage data and an approximate
                 location.
               </li>
             </ul>

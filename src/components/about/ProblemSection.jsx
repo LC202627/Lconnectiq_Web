@@ -32,11 +32,11 @@ export default function ProblemSection() {
         <Reveal className="max-w-[760px] mb-12">
           <Eyebrow>The problem we solve</Eyebrow>
           <h2 className="text-navy font-extrabold tracking-tight text-[clamp(28px,4vw,46px)] mt-4 mb-4">
-            Projects fail administratively first.
+            Administrative gaps can put projects at risk.
           </h2>
           <p className="text-ink-soft text-lg">
-            Long before a structural issue appears, the paperwork has already broken down. These
-            four gaps quietly drive most avoidable schedule and cost overruns.
+            Project information can fall out of sync long before issues reach the field. These four
+            administrative gaps can contribute to avoidable schedule delays and cost overruns.
           </p>
         </Reveal>
 

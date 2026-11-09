@@ -4,7 +4,7 @@ export const SERVICES = [
     title: "Construction Document Management",
     tag: "Process control",
     summary:
-      "RFI and submittal administration, drawing and specification control, and a complete document trail from project start through records turnover.",
+      "RFI and submittal administration, drawing and specification control, and a clear, organized document trail from project start through records turnover.",
     points: [
       "RFI and submittal administration, transmittals, registers, and correspondence",
       "Drawing and specification control with document tracking",
@@ -43,11 +43,11 @@ export const SERVICES = [
     title: "BIM, CAD & Drafting Support",
     tag: "Production support",
     summary:
-      "Structural drafting, BIM production, and drawing and model coordination, with revisions, schedules, and data extraction.",
+      "Structural drafting, BIM production, and drawing and model coordination, including drawing and model revisions, schedules, and data extraction.",
     points: [
       "Structural drafting, BIM production, and 3D modeling",
       "Drawing and model coordination and revisions",
-      "Schedules, layouts, and clash-identification support",
+      "Schedules, layouts, and support with identifying model clashes",
       "Material and data extraction and related production support",
     ],
   },

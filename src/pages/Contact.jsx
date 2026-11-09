@@ -13,8 +13,7 @@ export default function Contact() {
             Let's talk about your <span className="text-gold-soft">project.</span>
           </h1>
           <p className="text-white text-lg mt-5 max-w-[52ch]">
-            We respond within one business day with a clear scope, defined deliverables, and no
-            ambiguity about what we do and don't cover.
+            We'll respond within one business day to learn about your needs and discuss a clear scope, deliverables, and responsibilities.
           </p>
           <div className="mt-9 space-y-5">
             <div>
