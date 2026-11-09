@@ -127,8 +127,7 @@ export default function ContactForm() {
         </div>
         <h3 className="text-white font-bold text-2xl mt-5">Inquiry sent</h3>
         <p className="text-white text-[15px] mt-2.5 max-w-[42ch] mx-auto leading-relaxed">
-          Thanks. We&apos;ll respond within one business day with a clear scope, defined deliverables,
-          and no ambiguity about what we do and don&apos;t cover.
+          Thanks. We&apos;ll respond within one business day to learn about your needs and discuss a clear scope, deliverables, and responsibilities.
         </p>
         <button
           onClick={() => setSent(false)}
@@ -216,7 +215,7 @@ export default function ContactForm() {
       </div>
 
       <p className="text-[12px] text-white/80 mb-5 leading-relaxed">
-        We use your details only to respond to this inquiry. See our{" "}
+        We use the information you provide to respond to your inquiry, as described in our{" "}
         <a href="/privacy" className="text-gold-soft hover:text-white transition-colors underline">
           privacy policy
         </a>

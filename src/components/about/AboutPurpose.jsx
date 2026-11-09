@@ -29,9 +29,9 @@ export default function AboutPurpose() {
             support company serving the AEC industry, and we exist to fill that gap.
           </p>
           <p className="text-ink-soft text-[17px] leading-relaxed mb-5">
-            We don't design and we don't manage construction, we execute and structure, so
-            authority stays with the professionals who own it while the information chain stays
-            clean.
+            We don&apos;t provide design services or manage construction. We support project
+            execution and information workflows, while decision-making authority stays with the
+            professionals responsible for it.
           </p>
           <p className="text-navy font-semibold text-[17px] mb-9">
             No design liability assumed. No scope creep. No ambiguity.

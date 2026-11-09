@@ -11,7 +11,7 @@ const WHY = [
   {
     n: "02",
     title: "Cleaner coordination",
-    body: "Consistent logs, real-time traceability, and standardized reporting, your team always knows what's current.",
+    body: "Consistent logs, traceable updates, and standardized reports help your team see what's current.",
   },
   {
     n: "03",

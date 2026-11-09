@@ -18,7 +18,7 @@ export default function About() {
       <ProblemSection />
       <VideoStrip
         eyebrow="How we work"
-        title="Precision oversight, from breaking ground to closeout."
+        title="Structured project support, from startup through closeout."
         description="Every RFI, submittal, and drawing revision moves through a structured, monitored process, so nothing falls through the cracks between the office, the trades, and the field."
       />
       <WhySection />
