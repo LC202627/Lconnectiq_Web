@@ -67,12 +67,13 @@ const BOT_UA_RE =
 const SECURITY_HEADERS = {
   "Content-Security-Policy": [
     "default-src 'self'",
-    "script-src 'self' https://static.cloudflareinsights.com 'sha256-LAIceAChXOudW58wuh+bo1yGHkS+iQDP+13YZkC8HMA='",
+    "script-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com 'sha256-LAIceAChXOudW58wuh+bo1yGHkS+iQDP+13YZkC8HMA='",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "img-src 'self' data: blob: https://media.base44.com https://static.wixstatic.com",
     "media-src 'self' https://media.base44.com",
     "font-src 'self' https://fonts.gstatic.com",
-    "connect-src 'self' https://static.cloudflareinsights.com",
+    "connect-src 'self' https://static.cloudflareinsights.com https://challenges.cloudflare.com",
+    "frame-src https://challenges.cloudflare.com",
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",

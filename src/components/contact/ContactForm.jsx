@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { Loader2, Send, Check } from "lucide-react";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
@@ -12,6 +12,27 @@ const SERVICES = [
   "Workflow & Process Improvement",
   "Not sure, need a consultation",
 ];
+
+// Cloudflare Turnstile site key (public). Set VITE_TURNSTILE_SITE_KEY in the
+// build environment; when empty the widget is skipped and the Worker only
+// enforces the check if it has TURNSTILE_SECRET_KEY.
+const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || "";
+const TURNSTILE_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+
+function loadTurnstile() {
+  if (window.turnstile) return Promise.resolve(window.turnstile);
+  return new Promise((resolve, reject) => {
+    let script = document.querySelector(`script[src="${TURNSTILE_SRC}"]`);
+    if (!script) {
+      script = document.createElement("script");
+      script.src = TURNSTILE_SRC;
+      script.async = true;
+      document.head.appendChild(script);
+    }
+    script.addEventListener("load", () => resolve(window.turnstile));
+    script.addEventListener("error", reject);
+  });
+}
 
 const inputCls =
   "w-full bg-white/[0.10] border border-white/[0.24] rounded-sm px-3.5 py-3 text-white placeholder:text-white/70 text-[15px] transition-colors duration-200 focus:outline-none focus:border-[#9a8200]";
@@ -30,17 +51,48 @@ export default function ContactForm() {
     company_url: "", // honeypot — must stay empty
   });
 
+  const [captchaToken, setCaptchaToken] = useState("");
+  const captchaRef = useRef(null);
+  const widgetId = useRef(null);
+
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY || !captchaRef.current) return;
+    let cancelled = false;
+    loadTurnstile()
+      .then((ts) => {
+        if (cancelled || !captchaRef.current) return;
+        widgetId.current = ts.render(captchaRef.current, {
+          sitekey: TURNSTILE_SITE_KEY,
+          callback: (token) => setCaptchaToken(token),
+          "expired-callback": () => setCaptchaToken(""),
+          "error-callback": () => setCaptchaToken(""),
+        });
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+      if (widgetId.current != null && window.turnstile) window.turnstile.remove(widgetId.current);
+      widgetId.current = null;
+    };
+  }, [sent]);
+
+  const resetCaptcha = () => {
+    setCaptchaToken("");
+    if (widgetId.current != null && window.turnstile) window.turnstile.reset(widgetId.current);
+  };
+
   const update = (field) => (e) => setForm((f) => ({ ...f, [field]: e.target.value }));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.first_name || !form.last_name || !form.email || !form.message) return;
+    if (TURNSTILE_SITE_KEY && !captchaToken) return;
     setSubmitting(true);
     try {
       const res = await fetch("/api/inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, turnstile_token: captchaToken }),
       });
       if (!res.ok) throw new Error(`Inquiry failed (${res.status})`);
 
@@ -63,6 +115,7 @@ export default function ContactForm() {
       });
     } finally {
       setSubmitting(false);
+      resetCaptcha();
     }
   };
 
@@ -170,9 +223,11 @@ export default function ContactForm() {
         .
       </p>
 
+      {TURNSTILE_SITE_KEY && <div ref={captchaRef} className="mb-5 min-h-[65px]" />}
+
       <button
         type="submit"
-        disabled={submitting}
+        disabled={submitting || (!!TURNSTILE_SITE_KEY && !captchaToken)}
         className="w-full inline-flex items-center justify-center gap-2.5 font-semibold text-[15px] rounded-sm bg-[#9a8200] text-navy px-7 py-3.5 transition-all duration-300 hover:bg-white disabled:opacity-60"
       >
         {submitting ? (
