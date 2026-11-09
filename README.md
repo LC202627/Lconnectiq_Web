@@ -52,7 +52,7 @@ inquiry via [Resend](https://resend.com).
 3. In the Cloudflare dashboard → this Worker → **Settings → Variables and Secrets**:
    - `RESEND_API_KEY` (secret) — the Resend API key
    - `INQUIRY_FROM` — a verified sender, e.g. `LConnectiQ <inquiries@lconnectiq.com>`
-   - `INQUIRY_TO` (optional) — recipient, defaults to `lc@lconnectiq.com`
+   - `INQUIRY_TO` (optional) — recipient, defaults to `info@lconnectiq.com`
 
 **Spam protection (Cloudflare Turnstile, optional until keys exist):**
 
