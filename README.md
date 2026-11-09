@@ -54,6 +54,19 @@ inquiry via [Resend](https://resend.com).
    - `INQUIRY_FROM` — a verified sender, e.g. `LConnectiQ <inquiries@lconnectiq.com>`
    - `INQUIRY_TO` (optional) — recipient, defaults to `lc@lconnectiq.com`
 
+**Spam protection (Cloudflare Turnstile, optional until keys exist):**
+
+1. Cloudflare dashboard → **Turnstile** → **Add widget** for `lconnectiq.com`
+   (Managed mode). Copy the **site key** and **secret key**.
+2. Worker → **Settings → Variables and Secrets**: add `TURNSTILE_SECRET_KEY`
+   (secret). With it set, the Worker rejects any inquiry without a valid token.
+3. Worker → **Settings → Build → Variables and secrets**: add
+   `VITE_TURNSTILE_SITE_KEY` (the site key is public). It is read at build
+   time, so redeploy after adding it.
+
+Set **both**. With only the secret set, the form has no widget and every
+submission is rejected; with neither set, the check is skipped.
+
 **Test locally** (`wrangler` is a dev dependency):
 
 ```bash

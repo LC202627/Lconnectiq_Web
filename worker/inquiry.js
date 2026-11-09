@@ -6,7 +6,29 @@
  *   RESEND_API_KEY   Resend API key (secret)
  *   INQUIRY_FROM     verified sender, e.g. "LConnectiQ <inquiries@lconnectiq.com>"
  *   INQUIRY_TO       recipient (optional, defaults to lc@lconnectiq.com)
+ *   TURNSTILE_SECRET_KEY  Cloudflare Turnstile secret (secret). When set, every
+ *                    inquiry must carry a valid `turnstile_token`. When unset,
+ *                    the check is skipped (so the form still works before
+ *                    Turnstile is configured). Pair with VITE_TURNSTILE_SITE_KEY
+ *                    at build time so the widget appears on the form.
  */
+
+const TURNSTILE_VERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+
+async function verifyTurnstile(token, secret, ip) {
+  if (!token || typeof token !== "string" || token.length > 2048) return false;
+  const body = new URLSearchParams({ secret, response: token });
+  if (ip) body.set("remoteip", ip);
+  try {
+    const res = await fetch(TURNSTILE_VERIFY_URL, { method: "POST", body });
+    if (!res.ok) return false;
+    const out = await res.json();
+    return out.success === true;
+  } catch (err) {
+    console.error("inquiry: Turnstile verify failed", err);
+    return false;
+  }
+}
 
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
@@ -49,6 +71,17 @@ export async function handleInquiry(request, env) {
     message.length > 5000
   ) {
     return json({ error: "One or more fields are too long" }, 400);
+  }
+
+  if (env.TURNSTILE_SECRET_KEY) {
+    const ok = await verifyTurnstile(
+      data.turnstile_token,
+      env.TURNSTILE_SECRET_KEY,
+      request.headers.get("CF-Connecting-IP")
+    );
+    if (!ok) {
+      return json({ error: "Verification failed. Please try again." }, 400);
+    }
   }
 
   const apiKey = env.RESEND_API_KEY;
