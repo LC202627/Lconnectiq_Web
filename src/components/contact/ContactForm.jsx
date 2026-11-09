@@ -102,39 +102,39 @@ export default function ContactForm() {
       />
       <div className="grid grid-cols-2 gap-3.5 mb-4">
         <div>
-          <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/90 mb-1.5">
+          <label htmlFor="cf-first-name" className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/90 mb-1.5">
             First name
           </label>
-          <input required value={form.first_name} onChange={update("first_name")} className={inputCls} />
+          <input id="cf-first-name" name="first_name" autoComplete="given-name" required value={form.first_name} onChange={update("first_name")} className={inputCls} />
         </div>
         <div>
-          <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/90 mb-1.5">
+          <label htmlFor="cf-last-name" className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/90 mb-1.5">
             Last name
           </label>
-          <input required value={form.last_name} onChange={update("last_name")} className={inputCls} />
+          <input id="cf-last-name" name="last_name" autoComplete="family-name" required value={form.last_name} onChange={update("last_name")} className={inputCls} />
         </div>
       </div>
 
       <div className="mb-4">
-        <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
+        <label htmlFor="cf-company" className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
           Company / organization
         </label>
-        <input value={form.company} onChange={update("company")} className={inputCls} />
+        <input id="cf-company" name="company" autoComplete="organization" value={form.company} onChange={update("company")} className={inputCls} />
       </div>
 
       <div className="mb-4">
-        <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
+        <label htmlFor="cf-email" className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
           Email address
         </label>
-        <input type="email" required value={form.email} onChange={update("email")} className={inputCls} />
+        <input id="cf-email" name="email" autoComplete="email" type="email" required value={form.email} onChange={update("email")} className={inputCls} />
       </div>
 
       <div className="mb-4">
-        <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
+        <label htmlFor="cf-service" className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
           Service needed
         </label>
         <Select value={form.service} onValueChange={(v) => setForm((f) => ({ ...f, service: v }))}>
-          <SelectTrigger className={`${inputCls} h-auto py-3 data-[placeholder]:text-white/70`}>
+          <SelectTrigger id="cf-service" className={`${inputCls} h-auto py-3 data-[placeholder]:text-white/70`}>
             <SelectValue placeholder="Select a service…" />
           </SelectTrigger>
           <SelectContent className="max-h-72">
@@ -148,10 +148,12 @@ export default function ContactForm() {
       </div>
 
       <div className="mb-5">
-        <label className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
+        <label htmlFor="cf-message" className="block text-xs font-semibold tracking-[0.08em] uppercase text-white/60 mb-1.5">
           Project details
         </label>
         <textarea
+          id="cf-message"
+          name="message"
           required
           value={form.message}
           onChange={update("message")}

@@ -4,10 +4,14 @@ import { motion, useInView } from "framer-motion";
 export default function AnimatedStat({ value, suffix = "", label }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
-  const [display, setDisplay] = useState(0);
+  // Start at the real value so the markup (SSR, crawlers, link previews, no-JS)
+  // always contains the true number; the count-up below is purely visual.
+  const [display, setDisplay] = useState(value);
 
   useEffect(() => {
     if (!inView) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    setDisplay(0);
     const duration = 1200;
     const start = performance.now();
     let raf;

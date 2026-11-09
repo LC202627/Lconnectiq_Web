@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Linkedin, Mail } from "lucide-react";
 
+// Company LinkedIn page. Leave empty to hide the icon until the real page URL is set
+// (a generic linkedin.com link is worse than no link).
+const LINKEDIN_URL = "";
+
 export default function SiteFooter() {
   return (
     <footer className="bg-navy-deep text-white/95 pt-14 pb-7">
@@ -24,8 +28,9 @@ export default function SiteFooter() {
             </span>
           </div>
           <div className="flex gap-3">
+            {LINKEDIN_URL && (
             <a
-              href="https://www.linkedin.com"
+              href={LINKEDIN_URL}
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
@@ -33,6 +38,7 @@ export default function SiteFooter() {
             >
               <Linkedin size={16} />
             </a>
+            )}
             <a
               href="mailto:info@lconnectiq.com"
               aria-label="Email"

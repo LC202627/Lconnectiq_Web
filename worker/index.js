@@ -1,4 +1,5 @@
 import { handleInquiry } from "./inquiry.js";
+import { PORTFOLIO_ITEMS } from "../src/components/portfolio/portfolioData.js";
 
 /**
  * Entry Worker. Serves the API routes; everything else falls through to the
@@ -33,6 +34,19 @@ const PRERENDERED_ROUTES = {
   "/privacy": "privacy",
   "/terms": "terms",
 };
+
+// Every path the SPA actually renders. Anything else gets the SPA shell with a
+// real HTTP 404 (so search engines drop it) — the in-app "not found" screen
+// renders as usual. Keep in sync with <Routes> in src/App.jsx.
+const KNOWN_ROUTES = new Set([...Object.keys(PRERENDERED_ROUTES), "/interface-report"]);
+const PORTFOLIO_SLUGS = new Set(PORTFOLIO_ITEMS.map((p) => p.slug));
+
+function isKnownRoute(pathname) {
+  const p = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
+  if (KNOWN_ROUTES.has(p)) return true;
+  const m = /^\/portfolio\/([^/]+)$/.exec(p);
+  return !!m && PORTFOLIO_SLUGS.has(decodeURIComponent(m[1]));
+}
 
 // Known search engine and AI-assistant crawlers/browsing tools. Conservative
 // allow-list approach: only recognized bots get the prerendered snapshot;
@@ -118,6 +132,20 @@ export default {
       // Fall through to the normal SPA if the snapshot is ever missing.
     }
 
-    return withSecurityHeaders(await env.ASSETS.fetch(request));
+    const res = await env.ASSETS.fetch(request);
+
+    // Unknown path that fell through to the SPA shell (including missing
+    // files): same page, but with a real 404 status.
+    const isHtml = (res.headers.get("content-type") || "").includes("text/html");
+    if (
+      res.ok &&
+      isHtml &&
+      (request.method === "GET" || request.method === "HEAD") &&
+      !isKnownRoute(url.pathname)
+    ) {
+      return withSecurityHeaders(new Response(res.body, { status: 404, headers: res.headers }));
+    }
+
+    return withSecurityHeaders(res);
   },
 };
