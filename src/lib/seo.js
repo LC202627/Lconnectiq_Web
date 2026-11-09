@@ -8,12 +8,12 @@ export const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 export const ROUTE_META = {
   "/": {
-    title: "LConnectiQ | Construction Back-Office & Workflow Support",
+    title: "LConnectiQ | Construction Document & Back-Office Support",
     description:
       "Construction back-office and workflow support for the AEC industry: construction document management, remote project coordination, Procore management, BIM and CAD support, project controls and reporting, and workflow improvement. Serving the Southeast.",
   },
   "/services": {
-    title: "Services | LConnectiQ",
+    title: "Construction Document Management Services | LConnectiQ",
     description:
       "Construction Document Management, Remote Project Coordination Support, Procore Management & Construction Technology, BIM/CAD & Drafting Support, Project Controls & Reporting, and Workflow & Process Improvement.",
   },
@@ -28,7 +28,7 @@ export const ROUTE_META = {
       "LConnectiQ is a Florida-based construction back-office and workflow support company serving the AEC industry, positioned as a neutral project coordination and document control layer.",
   },
   "/contact": {
-    title: "Contact | LConnectiQ",
+    title: "Contact LConnectiQ | Construction Document Support",
     description: "Get in touch with LConnectiQ for construction back-office and workflow support services.",
   },
   "/privacy": {
