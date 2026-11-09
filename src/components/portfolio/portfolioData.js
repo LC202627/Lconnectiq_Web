@@ -16,7 +16,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "Tower · podium · utility block",
       Levels: "5 + podium",
     },
-    services: ["BIM, CAD & Drafting", "Construction Document Management", "Remote Project Engineering"],
+    services: ["BIM, CAD & Drafting", "Construction Document Management", "Remote Project Coordination Support"],
     highlights: [
       "Isometric projection showing interconnected structures and exposed skeletons",
       "Open floor plates and steel truss work documented for clash detection",
@@ -62,7 +62,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "3-story block · roof wing · braced projection",
       Levels: "3",
     },
-    services: ["BIM, CAD & Drafting", "Remote Project Engineering", "Procore & Construction Technology"],
+    services: ["BIM, CAD & Drafting", "Remote Project Coordination Support", "Procore & Construction Technology"],
     highlights: [
       "Ribbed metal roof spanning two offset elevations on open steel framing",
       "Diagonal steel struts supporting an overhanging ground-floor slab",
@@ -85,7 +85,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "Steel grid · voided slabs · truss · ramp",
       Levels: "Multi-level",
     },
-    services: ["BIM, CAD & Drafting", "Remote Project Engineering", "Workflow & Process Improvement"],
+    services: ["BIM, CAD & Drafting", "Remote Project Coordination Support", "Workflow & Process Improvement"],
     highlights: [
       "Vertical and horizontal steel grid documented on the upper levels",
       "Circular voids in the floor slab mapped for ventilation / atrium",
@@ -131,7 +131,7 @@ export const PORTFOLIO_ITEMS = [
       Composition: "Shear wall · open floors · core · base",
       Levels: "High-rise",
     },
-    services: ["BIM, CAD & Drafting", "Remote Project Engineering", "Procore & Construction Technology"],
+    services: ["BIM, CAD & Drafting", "Remote Project Coordination Support", "Procore & Construction Technology"],
     highlights: [
       "Tall rectangular concrete shear wall with stacked open floors",
       "Cylindrical central core with curved floor plates and ladder-frame support",

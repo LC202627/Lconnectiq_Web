@@ -12,14 +12,14 @@ export default function About() {
       <PageHeader
         eyebrow="Who we are"
         title="About LConnectiQ"
-        subtitle="The neutral execution layer your project team is missing."
+        subtitle="Construction document control and project coordination support for AEC teams."
       />
       <AboutPurpose />
       <ProblemSection />
       <VideoStrip
         eyebrow="How we work"
         title="Structured project support, from startup through closeout."
-        description="Every RFI, submittal, and drawing revision moves through a structured, monitored process, so nothing falls through the cracks between the office, the trades, and the field."
+        description="Every RFI, submittal, and drawing revision moves through a structured, tracked process, so the office, the trades, and the field work from the same information."
       />
       <WhySection />
       <CTABand />

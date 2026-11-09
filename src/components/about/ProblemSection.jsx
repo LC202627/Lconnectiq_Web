@@ -55,8 +55,8 @@ export default function ProblemSection() {
             Our answer &rarr;
           </span>
           <p className="text-white text-base max-w-[70ch]">
-            We become the neutral execution layer that keeps information organized, accountable,
-            and audit-ready, without ever taking design authority off your desk.
+            We provide the structured support that keeps information organized, accountable, and
+            audit-ready, without ever taking design authority off your desk.
           </p>
         </Reveal>
       </div>

@@ -64,8 +64,8 @@ export default function Privacy() {
             <p>
               Documents, drawings, models, and other project information that clients share with us
               during an engagement are governed by the confidentiality terms of our written service
-              agreements, not by this website policy. Client project data is never used for
-              marketing and is never shared outside the project team.
+              agreements, not by this website policy. Client project information is not used for
+              marketing. Any access or sharing is governed by those agreements.
             </p>
           </LegalSection>
 

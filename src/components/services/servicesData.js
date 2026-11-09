@@ -14,10 +14,10 @@ export const SERVICES = [
   },
   {
     idx: "02",
-    title: "Remote Project Engineering & Project Coordination Support",
+    title: "Remote Project Coordination Support",
     tag: "Execution support",
     summary:
-      "Remote project engineering and coordination support across startup, tracking, documentation, and closeout.",
+      "Remote project coordination support across startup, tracking, documentation, and closeout.",
     points: [
       "Project startup, schedule and deliverable tracking",
       "Meeting administration and action tracking",
