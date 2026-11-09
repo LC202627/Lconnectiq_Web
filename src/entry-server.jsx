@@ -12,51 +12,23 @@ import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
 import SiteLayout from "@/components/layout/SiteLayout";
+import { ROUTE_META } from "@/lib/seo";
 
-// Per-route metadata used for <title> / <meta name="description">. Kept here
-// (not inferred from JSX) so it stays in Claude's/your control independent of
-// visual copy changes on the page itself.
-export const ROUTES = {
-  "/": {
-    Component: Home,
-    title: "LConnectiQ | Construction Back-Office & Workflow Support",
-    description:
-      "LConnectiQ is a construction back-office and workflow support company serving the AEC industry: construction document management, remote project engineering, Procore and construction technology, BIM, CAD and drafting, project controls and reporting, and workflow and process improvement.",
-  },
-  "/services": {
-    Component: Services,
-    title: "Services | LConnectiQ",
-    description:
-      "Construction Document Management, Remote Project Engineering, Procore & Construction Technology Administration, BIM/CAD & Drafting Support, Project Controls & Reporting, and Workflow & Process Improvement.",
-  },
-  "/portfolio": {
-    Component: Portfolio,
-    title: "Portfolio | LConnectiQ",
-    description:
-      "Verified, authorized portfolio samples from LConnectiQ's construction document management and project engineering support work.",
-  },
-  "/about": {
-    Component: About,
-    title: "About | LConnectiQ",
-    description:
-      "LConnectiQ is a Florida-based construction back-office and workflow support company serving the AEC industry, positioned as a neutral project coordination and document control layer.",
-  },
-  "/contact": {
-    Component: Contact,
-    title: "Contact | LConnectiQ",
-    description: "Get in touch with LConnectiQ for construction back-office and workflow support services.",
-  },
-  "/privacy": {
-    Component: Privacy,
-    title: "Privacy Policy | LConnectiQ",
-    description: "LConnectiQ's privacy policy.",
-  },
-  "/terms": {
-    Component: Terms,
-    title: "Terms of Service | LConnectiQ",
-    description: "LConnectiQ's terms of service.",
-  },
+// Per-route title / description live in src/lib/seo.js (shared with the
+// client-side <RouteMeta />), so they stay independent of visual page copy.
+const COMPONENTS = {
+  "/": Home,
+  "/services": Services,
+  "/portfolio": Portfolio,
+  "/about": About,
+  "/contact": Contact,
+  "/privacy": Privacy,
+  "/terms": Terms,
 };
+
+export const ROUTES = Object.fromEntries(
+  Object.entries(COMPONENTS).map(([path, Component]) => [path, { Component, ...ROUTE_META[path] }])
+);
 
 /**
  * Renders a single public route to a static HTML string using the app's real

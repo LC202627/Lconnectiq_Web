@@ -25,7 +25,7 @@ async function main() {
 
   for (const [route] of Object.entries(ROUTES)) {
     const { html, title, description } = render(route);
-    const canonical = `${SITE_URL}${route === "/" ? "" : route}`;
+    const canonical = route === "/" ? `${SITE_URL}/` : `${SITE_URL}${route}`;
 
     const jsonLd =
       route === "/"
@@ -53,7 +53,7 @@ async function main() {
       .replace(/\s*<meta\s[^>]*name="description"[^>]*\/?>\n?/, "")
       .replace(/\s*<link\s[^>]*rel="canonical"[^>]*\/?>\n?/, "")
       .replace(/\s*<meta\s[^>]*property="og:[^"]*"[^>]*\/?>\n?/g, "")
-      .replace(/\s*<meta\s[^>]*name="twitter:card"[^>]*\/?>\n?/, "")
+      .replace(/\s*<meta\s[^>]*name="twitter:[^"]*"[^>]*\/?>\n?/g, "")
       .replace(
         "</head>",
         `  <meta name="description" content="${escapeHtml(description)}" />\n` +
@@ -63,7 +63,11 @@ async function main() {
           `  <meta property="og:description" content="${escapeHtml(description)}" />\n` +
           `  <meta property="og:url" content="${canonical}" />\n` +
           `  <meta property="og:type" content="website" />\n` +
-          `  <meta name="twitter:card" content="summary" />\n` +
+          `  <meta property="og:image" content="${SITE_URL}/og-image.png" />\n` +
+          `  <meta property="og:image:width" content="1200" />\n` +
+          `  <meta property="og:image:height" content="630" />\n` +
+          `  <meta name="twitter:card" content="summary_large_image" />\n` +
+          `  <meta name="twitter:image" content="${SITE_URL}/og-image.png" />\n` +
           `  ${jsonLd}\n` +
           `</head>`
       )

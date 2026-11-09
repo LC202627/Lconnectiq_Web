@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useTransform, animate } from "framer-motion";
 import Logo from "@/components/shared/Logo";
 
-const HOLD = 1600; // black hold before the fade begins
-const FADE = 1800; // black -> white fade duration
+const HOLD = 250; // black hold before the fade begins
+const FADE = 650; // black -> white fade duration
 
 export default function IntroSplash() {
   const [done, setDone] = useState(false);
@@ -39,12 +39,12 @@ export default function IntroSplash() {
           key="intro-splash"
           className="fixed inset-0 z-[100] flex items-center justify-center"
           style={{ backgroundColor }}
-          exit={{ opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }}
+          exit={{ opacity: 0, transition: { duration: 0.3, ease: "easeInOut" } }}
         >
           <motion.div
             initial={{ scale: 0.6, opacity: 0 }}
             animate={{ scale: 2, opacity: 1 }}
-            transition={{ duration: 3.4, delay: 0.2, ease: [0.22, 0.61, 0.36, 1] }}
+            transition={{ duration: 1.1, delay: 0, ease: [0.22, 0.61, 0.36, 1] }}
             className="relative"
           >
             {/* Radiant halo behind the mark */}
