@@ -5,7 +5,7 @@
  * or .dev.vars for local `wrangler dev`):
  *   RESEND_API_KEY   Resend API key (secret)
  *   INQUIRY_FROM     verified sender, e.g. "LConnectiQ <inquiries@lconnectiq.com>"
- *   INQUIRY_TO       recipient (optional, defaults to lc@lconnectiq.com)
+ *   INQUIRY_TO       recipient (optional, defaults to info@lconnectiq.com)
  *   TURNSTILE_SECRET_KEY  Cloudflare Turnstile secret (secret). When set, every
  *                    inquiry must carry a valid `turnstile_token`. When unset,
  *                    the check is skipped (so the form still works before
@@ -90,7 +90,7 @@ export async function handleInquiry(request, env) {
     console.error("inquiry: RESEND_API_KEY or INQUIRY_FROM not configured");
     return json({ error: "Email is not configured" }, 500);
   }
-  const to = env.INQUIRY_TO || "lc@lconnectiq.com";
+  const to = env.INQUIRY_TO || "info@lconnectiq.com";
 
   const text = [
     `Name: ${first} ${last}`,

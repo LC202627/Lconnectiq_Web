@@ -3,8 +3,8 @@
 
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxx
 INQUIRY_FROM=LConnectiQ <inquiries@lconnectiq.com>
-# Optional, defaults to lc@lconnectiq.com
-INQUIRY_TO=lc@lconnectiq.com
+# Optional, defaults to info@lconnectiq.com
+INQUIRY_TO=info@lconnectiq.com
 
 # Optional: Cloudflare Turnstile. Use Cloudflare's always-pass test secret locally:
 # TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
