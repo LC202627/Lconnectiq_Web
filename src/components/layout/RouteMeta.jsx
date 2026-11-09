@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { getProjectBySlug } from "@/components/portfolio/portfolioData";
 import { ROUTE_META, NOT_FOUND_META, OG_IMAGE, canonicalFor, normalizePath } from "@/lib/seo";
 
 function setTag(selector, create, value) {
@@ -30,7 +31,11 @@ export default function RouteMeta() {
 
   useEffect(() => {
     const path = normalizePath(pathname);
-    const known = ROUTE_META[path];
+    const project = /^\/portfolio\/([^/]+)$/.exec(path);
+    const item = project ? getProjectBySlug(decodeURIComponent(project[1])) : null;
+    const known = item
+      ? { title: `${item.title} | LConnectiQ Portfolio`, description: item.summary }
+      : ROUTE_META[path];
     const { title, description } = known ?? NOT_FOUND_META;
     const canonical = canonicalFor(path);
 

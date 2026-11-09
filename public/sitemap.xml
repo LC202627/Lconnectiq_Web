@@ -21,6 +21,41 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://lconnectiq.com/portfolio/administrative-building</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lconnectiq.com/portfolio/concrete-parking-structure</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lconnectiq.com/portfolio/institutional-facility</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lconnectiq.com/portfolio/mixed-use-development</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lconnectiq.com/portfolio/multi-story-residential</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lconnectiq.com/portfolio/private-building</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://lconnectiq.com/portfolio/steel-framed-building</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://lconnectiq.com/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
