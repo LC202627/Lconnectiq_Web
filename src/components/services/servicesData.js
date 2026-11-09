@@ -27,14 +27,14 @@ export const SERVICES = [
   },
   {
     idx: "03",
-    title: "Procore Administration & Construction Technology Support",
+    title: "Procore Management & Construction Technology Support",
     tag: "Platform support",
     summary:
-      "Procore setup, configuration, and administration, plus day-to-day construction-technology support.",
+      "Procore setup, configuration, and management, plus day-to-day construction-technology support.",
     points: [
       "Procore setup, permissions, and templates",
       "Workflow configuration and platform governance",
-      "Administration, user support, and data organization",
+      "Management, user support, and data organization",
       "Reporting and construction-technology support",
     ],
   },

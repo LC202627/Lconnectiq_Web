@@ -15,7 +15,7 @@ export const ROUTE_META = {
   "/services": {
     title: "Services | LConnectiQ",
     description:
-      "Construction Document Management, Remote Project Coordination Support, Procore & Construction Technology Administration, BIM/CAD & Drafting Support, Project Controls & Reporting, and Workflow & Process Improvement.",
+      "Construction Document Management, Remote Project Coordination Support, Procore Management & Construction Technology, BIM/CAD & Drafting Support, Project Controls & Reporting, and Workflow & Process Improvement.",
   },
   "/portfolio": {
     title: "Portfolio | LConnectiQ",

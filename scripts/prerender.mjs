@@ -41,7 +41,7 @@ async function main() {
             makesOffer: [
               "Construction Document Management",
               "Remote Project Coordination Support",
-              "Procore Administration & Construction Technology Support",
+              "Procore Management & Construction Technology Support",
               "BIM, CAD & Drafting Support",
               "Project Controls, Reporting & Data Management",
               "Workflow & Process Improvement",
