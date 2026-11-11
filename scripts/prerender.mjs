@@ -13,7 +13,7 @@ const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const SITE_URL = "https://lconnectiq.com";
 
 async function main() {
-  const { ROUTES, render } = await import(
+  const { ROUTES, render, LINKEDIN_URL } = await import(
     pathToFileURL(path.join(ROOT, "dist-server", "entry-server.js")).href
   );
 
@@ -44,6 +44,7 @@ async function main() {
             "@id": `${SITE_URL}/#organization`,
             name: "LConnectiQ",
             legalName: "Lymnea Group LLC",
+            ...(LINKEDIN_URL ? { sameAs: [LINKEDIN_URL] } : {}),
             url: SITE_URL,
             description,
             telephone: "+1-850-721-1804",
