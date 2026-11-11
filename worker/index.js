@@ -48,6 +48,9 @@ function isKnownRoute(pathname) {
   return !!m && PORTFOLIO_SLUGS.has(decodeURIComponent(m[1]));
 }
 
+// Production hostnames that must always be served over HTTPS.
+const PRODUCTION_HOST_RE = /^(www\.)?lconnectiq\.com$/i;
+
 // Known search engine and AI-assistant crawlers/browsing tools. Conservative
 // allow-list approach: only recognized bots get the prerendered snapshot;
 // everyone else (all real browsers) gets the standard SPA.
@@ -99,6 +102,16 @@ function withSecurityHeaders(response) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    // Plain-HTTP requests to the production hostnames get a permanent redirect
+    // to HTTPS before anything else is served. HSTS alone does not protect a
+    // first visit, so the redirect has to exist. (Local dev on localhost is
+    // untouched.) Cloudflare's "Always Use HTTPS" setting does the same at the
+    // edge; this keeps the behaviour in code too.
+    if (url.protocol === "http:" && PRODUCTION_HOST_RE.test(url.hostname)) {
+      url.protocol = "https:";
+      return withSecurityHeaders(Response.redirect(url.toString(), 301));
+    }
 
     if (url.pathname === "/api/inquiry") {
       if (request.method !== "POST") {
