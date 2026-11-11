@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Linkedin, Mail } from "lucide-react";
+import { LINKEDIN_URL } from "@/lib/seo";
 
-// Company LinkedIn page. Leave empty to hide the icon until the real page URL is set
+// LINKEDIN_URL lives in src/lib/seo.js. If it is ever emptied, the icon is hidden
 // (a generic linkedin.com link is worse than no link).
-const LINKEDIN_URL = "";
 
 export default function SiteFooter() {
   return (

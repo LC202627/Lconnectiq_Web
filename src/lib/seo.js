@@ -4,6 +4,8 @@
 // same title / description / canonical for a given URL.
 
 export const SITE_URL = "https://lconnectiq.com";
+// Public LinkedIn company page (shown in the footer and in the structured data).
+export const LINKEDIN_URL = "https://www.linkedin.com/company/144119414/";
 export const OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 export const ROUTE_META = {

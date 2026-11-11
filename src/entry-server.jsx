@@ -14,6 +14,8 @@ import Terms from "@/pages/Terms";
 import SiteLayout from "@/components/layout/SiteLayout";
 import { ROUTE_META } from "@/lib/seo";
 
+export { LINKEDIN_URL } from "@/lib/seo";
+
 // Per-route title / description live in src/lib/seo.js (shared with the
 // client-side <RouteMeta />), so they stay independent of visual page copy.
 const COMPONENTS = {
